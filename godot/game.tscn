@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6dm4koosrelx"]
+
+[ext_resource type="Script" uid="uid://cdv27o7vvavc" path="res://kliker.gd" id="1_80nbo"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 523.0
+offset_bottom = 563.0
+script = ExtResource("1_80nbo")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 31.0
+offset_right = 302.0
+offset_bottom = 84.0
+text = "кликер
+"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 92.0
+offset_right = 281.0
+offset_bottom = 145.0
+text = "0"
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 140.0
+offset_right = 262.0
+offset_bottom = 215.0
