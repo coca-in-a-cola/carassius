@@ -17,7 +17,7 @@ offset_left = 166.0
 offset_top = 180.0
 offset_right = 322.0
 offset_bottom = 233.0
-text = "кликер
+text = "кликер тест
 "
 
 [node name="Label2" type="Label" parent="Control"]
