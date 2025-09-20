@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1758394519|2797742382';
+const CACHE_VERSION = '1758396638|4917336966';
 /** @type {string} */
 const CACHE_PREFIX = 'Carassius-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
