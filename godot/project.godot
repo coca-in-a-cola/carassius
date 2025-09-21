@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Carassius"
-run/main_scene="uid://b6dm4koosrelx"
+run/main_scene="uid://dlsl4pbfwrnjc"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Network="*res://scenes/network.gd"
+Utils="*res://scenes/utils.gd"
 
 [display]
 

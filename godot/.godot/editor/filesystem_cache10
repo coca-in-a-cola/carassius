@@ -1,3 +1,11 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1758391735
+72322a848ab928aa5c89f0cb78209805
+::res://::1758460867
+export_presets.cfg::TextFile::-1::1758396639::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5176643333233221016::1758391720::1758391737::1::::<><><>0<>0<>b5f6e9af8b8bbecc25e8fb29f609a699<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+kliker.gd::GDScript::147895797679061188::1758396628::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/::1758460864
+::res://scenes/loading/::1758460741
+loading.gd::GDScript::2074115705278122235::1758460869::0::1::::<>Node2D<><>0<>0<><>::
+loading.tscn::PackedScene::7969218595266725040::1758460344::0::1::::<><><>0<>0<><>::
+::res://scenes/main/::1758460867
+game.tscn::PackedScene::4569248909192310277::1758460869::0::1::::<><><>0<>0<><>::uid://cdv27o7vvavc::::res://kliker.gd

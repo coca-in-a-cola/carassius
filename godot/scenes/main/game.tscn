@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b6dm4koosrelx"]
 
-[ext_resource type="Script" uid="uid://cdv27o7vvavc" path="res://kliker.gd" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://cdv27o7vvavc" path="res://scenes/main/kliker.gd" id="1_e64el"]
 
 [node name="Game" type="Node2D"]
 
@@ -9,7 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 426.0
 offset_bottom = 926.0
-script = ExtResource("1_80nbo")
+script = ExtResource("1_e64el")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
