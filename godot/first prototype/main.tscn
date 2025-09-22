@@ -1,0 +1,166 @@
+[gd_scene load_steps=25 format=3 uid="uid://dbo0h46srxld5"]
+
+[ext_resource type="Script" uid="uid://bhofhx6bsyyj" path="res://first prototype/player_data.gd" id="1_qvj7q"]
+[ext_resource type="PackedScene" uid="uid://d0aqjr488e1te" path="res://first prototype/objects/card.tscn" id="2_3rryu"]
+[ext_resource type="Script" uid="uid://fvg7dim6f4cw" path="res://first prototype/deck_controller.gd" id="2_bbj7l"]
+[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/card meta data.gd" id="3_n2ms6"]
+[ext_resource type="Resource" uid="uid://bcaperrwft7r4" path="res://first prototype/Cards/TestCard.tres" id="3_si4ni"]
+[ext_resource type="Resource" uid="uid://c67slcxx5op5y" path="res://first prototype/Cards/main.tres" id="4_opuq4"]
+[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BasicEffect.gd" id="4_pei0g"]
+[ext_resource type="Script" uid="uid://bglbt362fxwyd" path="res://first prototype/ResourceClasses/ChangeStatsEffect.gd" id="5_opuq4"]
+[ext_resource type="Resource" uid="uid://bxny4ffbv1n4x" path="res://first prototype/Cards/Job.tres" id="6_bajvb"]
+[ext_resource type="Resource" uid="uid://b1darfg6yku4m" path="res://first prototype/Cards/TestCard3.tres" id="7_qw4h1"]
+[ext_resource type="Resource" uid="uid://dfdtd7qp82cd3" path="res://first prototype/Cards/Hunger.tres" id="9_d5e8v"]
+[ext_resource type="Resource" uid="uid://cquktsgu8heky" path="res://first prototype/Cards/Salary.tres" id="10_tlhdv"]
+
+[sub_resource type="Resource" id="Resource_o0yle"]
+script = ExtResource("5_opuq4")
+value = 15
+stat_type = 1
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_g3rbc"]
+script = ExtResource("5_opuq4")
+value = -100
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_aqb3m"]
+script = ExtResource("5_opuq4")
+value = -15
+stat_type = 1
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_3jnal"]
+script = ExtResource("5_opuq4")
+value = -5
+stat_type = 2
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_bd61p"]
+script = ExtResource("3_n2ms6")
+left_text = "Купить ей цветы"
+right_text = "Попробовать познакомиться"
+main_text = "ты встретил красивую девушку"
+left_effects = Array[ExtResource("4_pei0g")]([SubResource("Resource_o0yle"), SubResource("Resource_g3rbc")])
+right_effects = Array[ExtResource("4_pei0g")]([SubResource("Resource_aqb3m"), SubResource("Resource_3jnal")])
+metadata/_custom_type_script = "uid://b3qfc0gvstbue"
+
+[sub_resource type="Resource" id="Resource_8xmoq"]
+script = ExtResource("5_opuq4")
+value = 15
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_wcfev"]
+script = ExtResource("5_opuq4")
+value = -5
+stat_type = 1
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_aacgu"]
+script = ExtResource("3_n2ms6")
+left_text = "4"
+right_text = "четыре"
+main_text = "2+2?"
+left_effects = Array[ExtResource("4_pei0g")]([SubResource("Resource_8xmoq"), SubResource("Resource_wcfev")])
+metadata/_custom_type_script = "uid://b3qfc0gvstbue"
+
+[sub_resource type="GDScript" id="GDScript_si4ni"]
+script/source = "extends Label
+
+
+func _on_player_data_health_changed(new_health: Variant) -> void:
+	text = \"Здровоье: \" + str(new_health) + \"/100\"
+"
+
+[sub_resource type="GDScript" id="GDScript_bbj7l"]
+script/source = "extends Label
+
+
+func _on_player_data_family_changed(new_family: Variant) -> void:
+	text = \"Семья: \" + str(new_family) + \"/100\"
+"
+
+[sub_resource type="GDScript" id="GDScript_m06kt"]
+script/source = "extends Label
+
+
+func _on_player_data_happiness_changed(new_happiness: Variant) -> void:
+	text = \"Счастье: \" + str(new_happiness) + \"/100\"
+"
+
+[sub_resource type="GDScript" id="GDScript_0ba0g"]
+script/source = "extends Label
+
+
+func _on_player_data_money_changed(new_money: Variant) -> void:
+	text = \"Ваши деньги - \" + str(new_money) + \" рублей\"
+"
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerData" type="Node" parent="."]
+script = ExtResource("1_qvj7q")
+
+[node name="DeckController" type="Node" parent="." node_paths=PackedStringArray("current_card")]
+script = ExtResource("2_bbj7l")
+current_card = NodePath("../MarginContainer/HBoxContainer")
+card_meta_array = Array[ExtResource("3_n2ms6")]([ExtResource("4_opuq4"), ExtResource("6_bajvb"), SubResource("Resource_bd61p")])
+late_random_events = Array[ExtResource("3_n2ms6")]([SubResource("Resource_aacgu"), ExtResource("7_qw4h1"), ExtResource("3_si4ni")])
+regular_events = Array[ExtResource("3_n2ms6")]([ExtResource("9_d5e8v"), ExtResource("10_tlhdv")])
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" parent="MarginContainer" instance=ExtResource("2_3rryu")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+_card_data = ExtResource("4_opuq4")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HP" type="Label" parent="MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = SubResource("GDScript_si4ni")
+
+[node name="FM" type="Label" parent="MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = SubResource("GDScript_bbj7l")
+
+[node name="Happy" type="Label" parent="MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = SubResource("GDScript_m06kt")
+
+[node name="MONEY" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = SubResource("GDScript_0ba0g")
+
+[connection signal="family_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/FM" method="_on_player_data_family_changed"]
+[connection signal="happiness_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/Happy" method="_on_player_data_happiness_changed"]
+[connection signal="health_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/HP" method="_on_player_data_health_changed"]
+[connection signal="money_changed" from="PlayerData" to="MarginContainer/MONEY" method="_on_player_data_money_changed"]
+[connection signal="choice_made" from="MarginContainer/HBoxContainer" to="PlayerData" method="_on_h_box_container_choice_made"]
+[connection signal="choice_made" from="MarginContainer/HBoxContainer" to="DeckController" method="_on_h_box_container_choice_made"]

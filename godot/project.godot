@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Carassius"
-run/main_scene="uid://dlsl4pbfwrnjc"
+run/main_scene="uid://dbo0h46srxld5"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,8 +22,8 @@ Utils="*res://scenes/utils.gd"
 
 [display]
 
-window/size/viewport_width=430
-window/size/viewport_height=932
+window/size/viewport_width=680
+window/size/viewport_height=1080
 
 [rendering]
 

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CardRes" load_steps=8 format=3 uid="uid://bcaperrwft7r4"]
+
+[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BasicEffect.gd" id="1_64687"]
+[ext_resource type="Script" uid="uid://bglbt362fxwyd" path="res://first prototype/ResourceClasses/ChangeStatsEffect.gd" id="1_w4usj"]
+[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/card meta data.gd" id="2_64687"]
+
+[sub_resource type="Resource" id="Resource_anyg6"]
+script = ExtResource("1_w4usj")
+value = -10
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_64687"]
+script = ExtResource("1_w4usj")
+value = 150
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_q1y3n"]
+script = ExtResource("1_w4usj")
+value = 10
+stat_type = 1
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_p623x"]
+script = ExtResource("1_w4usj")
+value = -75
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[resource]
+script = ExtResource("2_64687")
+left_text = "-10 hp"
+right_text = "+10 семьи"
+main_text = "Биба или боба"
+left_effects = Array[ExtResource("1_64687")]([SubResource("Resource_anyg6"), SubResource("Resource_64687")])
+right_effects = Array[ExtResource("1_64687")]([SubResource("Resource_q1y3n"), SubResource("Resource_p623x")])
+metadata/_custom_type_script = "uid://b3qfc0gvstbue"

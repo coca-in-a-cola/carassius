@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="CardRes" load_steps=10 format=3 uid="uid://dfdtd7qp82cd3"]
+
+[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BasicEffect.gd" id="1_wkt5p"]
+[ext_resource type="Script" uid="uid://bglbt362fxwyd" path="res://first prototype/ResourceClasses/ChangeStatsEffect.gd" id="2_2d65u"]
+[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/card meta data.gd" id="3_16iy5"]
+
+[sub_resource type="Resource" id="Resource_anyg6"]
+script = ExtResource("2_2d65u")
+value = -25
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_64687"]
+script = ExtResource("2_2d65u")
+value = 5
+stat_type = 2
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_wkt5p"]
+script = ExtResource("2_2d65u")
+value = -50
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_q1y3n"]
+script = ExtResource("2_2d65u")
+value = -15
+stat_type = 2
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_p623x"]
+script = ExtResource("2_2d65u")
+value = 10
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_2d65u"]
+script = ExtResource("2_2d65u")
+value = -125
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[resource]
+script = ExtResource("3_16iy5")
+left_text = "Шава рядом с метро"
+right_text = "Нормальная кафешка"
+main_text = "Ты проголодался, где покушаешь?"
+left_effects = Array[ExtResource("1_wkt5p")]([SubResource("Resource_anyg6"), SubResource("Resource_64687"), SubResource("Resource_wkt5p")])
+right_effects = Array[ExtResource("1_wkt5p")]([SubResource("Resource_q1y3n"), SubResource("Resource_p623x"), SubResource("Resource_2d65u")])
+metadata/_custom_type_script = "uid://b3qfc0gvstbue"
