@@ -37,7 +37,7 @@ func _ready():
 
 
 
-func _on_h_box_container_choice_made(effects: Array[Effect]) -> void:
+func apply_effects(effects: Array[Effect]) -> void:
 	for effect in effects:
 		if effect is StatEffect:
 			match effect.stat_type:

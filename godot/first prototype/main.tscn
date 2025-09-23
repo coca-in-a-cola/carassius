@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dbo0h46srxld5"]
+[gd_scene load_steps=40 format=3 uid="uid://dbo0h46srxld5"]
 
 [ext_resource type="Script" uid="uid://bhofhx6bsyyj" path="res://first prototype/player_data.gd" id="1_qvj7q"]
 [ext_resource type="PackedScene" uid="uid://d0aqjr488e1te" path="res://first prototype/objects/card.tscn" id="2_3rryu"]
@@ -9,9 +9,90 @@
 [ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BasicEffect.gd" id="4_pei0g"]
 [ext_resource type="Script" uid="uid://bglbt362fxwyd" path="res://first prototype/ResourceClasses/ChangeStatsEffect.gd" id="5_opuq4"]
 [ext_resource type="Resource" uid="uid://bxny4ffbv1n4x" path="res://first prototype/Cards/Job.tres" id="6_bajvb"]
+[ext_resource type="Script" uid="uid://citmsq7g4xycn" path="res://first prototype/ResourceClasses/TimeEffect.gd" id="7_bajvb"]
 [ext_resource type="Resource" uid="uid://b1darfg6yku4m" path="res://first prototype/Cards/TestCard3.tres" id="7_qw4h1"]
 [ext_resource type="Resource" uid="uid://dfdtd7qp82cd3" path="res://first prototype/Cards/Hunger.tres" id="9_d5e8v"]
 [ext_resource type="Resource" uid="uid://cquktsgu8heky" path="res://first prototype/Cards/Salary.tres" id="10_tlhdv"]
+[ext_resource type="Script" uid="uid://csuk31p6r5liv" path="res://first prototype/long_time_effect_system.gd" id="13_opuq4"]
+
+[sub_resource type="Resource" id="Resource_qw4h1"]
+script = ExtResource("5_opuq4")
+value = 5
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_d5e8v"]
+script = ExtResource("7_bajvb")
+duration = 5
+stat_effect = SubResource("Resource_qw4h1")
+metadata/_custom_type_script = "uid://citmsq7g4xycn"
+
+[sub_resource type="Resource" id="Resource_tlhdv"]
+script = ExtResource("5_opuq4")
+value = 5
+stat_type = 1
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_7117g"]
+script = ExtResource("7_bajvb")
+duration = 5
+stat_effect = SubResource("Resource_tlhdv")
+metadata/_custom_type_script = "uid://citmsq7g4xycn"
+
+[sub_resource type="Resource" id="Resource_sl0xp"]
+script = ExtResource("5_opuq4")
+value = 5
+stat_type = 2
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_evhl7"]
+script = ExtResource("7_bajvb")
+duration = 5
+stat_effect = SubResource("Resource_sl0xp")
+metadata/_custom_type_script = "uid://citmsq7g4xycn"
+
+[sub_resource type="Resource" id="Resource_53o3g"]
+script = ExtResource("5_opuq4")
+value = -300
+stat_type = 2
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_r0nra"]
+script = ExtResource("5_opuq4")
+value = -15
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_wv2uv"]
+script = ExtResource("5_opuq4")
+value = -15
+stat_type = 1
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_smuye"]
+script = ExtResource("5_opuq4")
+value = -15
+stat_type = 2
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_pwu7x"]
+script = ExtResource("5_opuq4")
+value = 15
+stat_type = 3
+metadata/_custom_type_script = "uid://bglbt362fxwyd"
+
+[sub_resource type="Resource" id="Resource_vn2i4"]
+script = ExtResource("7_bajvb")
+duration = 10
+stat_effect = SubResource("Resource_pwu7x")
+metadata/_custom_type_script = "uid://citmsq7g4xycn"
+
+[sub_resource type="Resource" id="Resource_rvxpb"]
+script = ExtResource("3_n2ms6")
+left_text = "Всё +5 вверх долго, но прям ща -многа денег"
+right_text = "Долгая зп, но -15 всего"
+main_text = "Если чо, тестируем временные эффекты"
+left_effects = Array[ExtResource("4_pei0g")]([SubResource("Resource_d5e8v"), SubResource("Resource_7117g"), SubResource("Resource_evhl7"), SubResource("Resource_53o3g")])
+right_effects = Array[ExtResource("4_pei0g")]([SubResource("Resource_r0nra"), SubResource("Resource_wv2uv"), SubResource("Resource_smuye"), SubResource("Resource_vn2i4")])
+metadata/_custom_type_script = "uid://b3qfc0gvstbue"
 
 [sub_resource type="Resource" id="Resource_o0yle"]
 script = ExtResource("5_opuq4")
@@ -67,35 +148,51 @@ left_effects = Array[ExtResource("4_pei0g")]([SubResource("Resource_8xmoq"), Sub
 metadata/_custom_type_script = "uid://b3qfc0gvstbue"
 
 [sub_resource type="GDScript" id="GDScript_si4ni"]
-script/source = "extends Label
+script/source = "extends AnimatedIntLabel
 
 
 func _on_player_data_health_changed(new_health: Variant) -> void:
-	text = \"Здровоье: \" + str(new_health) + \"/100\"
+	set_value(new_health)
+
+
+func get_label_text(with_value):
+	return \"Здоровье: \" + str(with_value) + \"/100\"
 "
 
 [sub_resource type="GDScript" id="GDScript_bbj7l"]
-script/source = "extends Label
+script/source = "extends AnimatedIntLabel
 
 
 func _on_player_data_family_changed(new_family: Variant) -> void:
-	text = \"Семья: \" + str(new_family) + \"/100\"
+	set_value(new_family)
+
+
+func get_label_text(with_value):
+	return \"Семья: \" + str(with_value) + \"/100\"
 "
 
 [sub_resource type="GDScript" id="GDScript_m06kt"]
-script/source = "extends Label
+script/source = "extends AnimatedIntLabel
 
 
 func _on_player_data_happiness_changed(new_happiness: Variant) -> void:
-	text = \"Счастье: \" + str(new_happiness) + \"/100\"
+	set_value(new_happiness)
+
+
+func get_label_text(with_value):
+	return \"Счастье: \" + str(with_value) + \"/100\"
 "
 
 [sub_resource type="GDScript" id="GDScript_0ba0g"]
-script/source = "extends Label
+script/source = "extends AnimatedIntLabel
 
 
 func _on_player_data_money_changed(new_money: Variant) -> void:
-	text = \"Ваши деньги - \" + str(new_money) + \" рублей\"
+	set_value(new_money)
+
+
+func get_label_text(with_value):
+	return \"Ваши деньги: \" + str(with_value) + \" рублей\"
 "
 
 [node name="Main" type="Control"]
@@ -111,8 +208,8 @@ script = ExtResource("1_qvj7q")
 
 [node name="DeckController" type="Node" parent="." node_paths=PackedStringArray("current_card")]
 script = ExtResource("2_bbj7l")
-current_card = NodePath("../MarginContainer/HBoxContainer")
-card_meta_array = Array[ExtResource("3_n2ms6")]([ExtResource("4_opuq4"), ExtResource("6_bajvb"), SubResource("Resource_bd61p")])
+current_card = NodePath("../MarginContainer/CardSystem")
+card_meta_array = Array[ExtResource("3_n2ms6")]([ExtResource("4_opuq4"), ExtResource("6_bajvb"), SubResource("Resource_rvxpb"), SubResource("Resource_bd61p")])
 late_random_events = Array[ExtResource("3_n2ms6")]([SubResource("Resource_aacgu"), ExtResource("7_qw4h1"), ExtResource("3_si4ni")])
 regular_events = Array[ExtResource("3_n2ms6")]([ExtResource("9_d5e8v"), ExtResource("10_tlhdv")])
 
@@ -126,7 +223,7 @@ grow_vertical = 2
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="HBoxContainer" parent="MarginContainer" instance=ExtResource("2_3rryu")]
+[node name="CardSystem" parent="MarginContainer" instance=ExtResource("2_3rryu")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -140,16 +237,19 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 3
 script = SubResource("GDScript_si4ni")
+metadata/_custom_type_script = "uid://cah3b3nmtbaop"
 
 [node name="FM" type="Label" parent="MarginContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 script = SubResource("GDScript_bbj7l")
+metadata/_custom_type_script = "uid://cah3b3nmtbaop"
 
 [node name="Happy" type="Label" parent="MarginContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 script = SubResource("GDScript_m06kt")
+metadata/_custom_type_script = "uid://cah3b3nmtbaop"
 
 [node name="MONEY" type="Label" parent="MarginContainer"]
 layout_mode = 2
@@ -157,10 +257,16 @@ size_flags_vertical = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 script = SubResource("GDScript_0ba0g")
+metadata/_custom_type_script = "uid://cah3b3nmtbaop"
+
+[node name="LongTimeEffectSystem" type="Node" parent="."]
+script = ExtResource("13_opuq4")
 
 [connection signal="family_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/FM" method="_on_player_data_family_changed"]
 [connection signal="happiness_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/Happy" method="_on_player_data_happiness_changed"]
 [connection signal="health_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/HP" method="_on_player_data_health_changed"]
 [connection signal="money_changed" from="PlayerData" to="MarginContainer/MONEY" method="_on_player_data_money_changed"]
-[connection signal="choice_made" from="MarginContainer/HBoxContainer" to="PlayerData" method="_on_h_box_container_choice_made"]
-[connection signal="choice_made" from="MarginContainer/HBoxContainer" to="DeckController" method="_on_h_box_container_choice_made"]
+[connection signal="choice_made" from="MarginContainer/CardSystem" to="PlayerData" method="apply_effects"]
+[connection signal="choice_made" from="MarginContainer/CardSystem" to="DeckController" method="_on_h_box_container_choice_made"]
+[connection signal="choice_made" from="MarginContainer/CardSystem" to="LongTimeEffectSystem" method="_on_card_system_choice_made"]
+[connection signal="apply_effects" from="LongTimeEffectSystem" to="PlayerData" method="apply_effects"]
