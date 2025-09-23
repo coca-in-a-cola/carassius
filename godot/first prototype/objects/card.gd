@@ -9,10 +9,6 @@ class_name CardNode
 		$VBoxContainer/MainText.text = value.main_text
 		_card_data = value
 
-
-
-
-
 signal choice_made(effect : Array[Effect])
 
 func _on_button_pressed() -> void:

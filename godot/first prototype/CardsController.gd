@@ -9,8 +9,10 @@ var turn = 0
 @export var late_random_events : Array[CardRes]
 @export var regular_events : Array[CardRes]
 
+func set_next_card(card: CardRes):
+	current_card._card_data = card
 
-func _on_h_box_container_choice_made(__effects) -> void:
+func _on_card_system_choice_made(_effect: Array[Effect]) -> void:
 	turn += 1
 	if turn % 3 == 0:
 		set_next_card(regular_events.pick_random())
@@ -19,8 +21,3 @@ func _on_h_box_container_choice_made(__effects) -> void:
 	else:
 		set_next_card(card_meta_array[turn])
 	print(turn)
-
-
-
-func set_next_card(card: CardRes):
-	current_card._card_data = card

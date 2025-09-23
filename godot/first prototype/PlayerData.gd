@@ -1,4 +1,5 @@
 extends Node
+class_name PlayerData
 
 signal health_changed(new_health)
 var health = 50 : 
@@ -34,18 +35,3 @@ func _ready():
 	family = 50
 	happiness = 50
 	money = 0
-
-
-
-func apply_effects(effects: Array[Effect]) -> void:
-	for effect in effects:
-		if effect is StatEffect:
-			match effect.stat_type:
-				StatEffect.StatType.HEALTH:
-					health += effect.value
-				StatEffect.StatType.FAMILY:
-					family += effect.value
-				StatEffect.StatType.HAPPINESS:
-					happiness += effect.value
-				StatEffect.StatType.MONEY:
-					money += effect.value
