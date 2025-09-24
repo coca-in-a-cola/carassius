@@ -13,7 +13,6 @@ metadata/_custom_type_script = "uid://bglbt362fxwyd"
 [sub_resource type="Resource" id="Resource_sl0xp"]
 script = ExtResource("2_fa6hw")
 value = 10
-stat_type = null
 metadata/_custom_type_script = "uid://bglbt362fxwyd"
 
 [sub_resource type="Resource" id="Resource_evhl7"]

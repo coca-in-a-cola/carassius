@@ -21,3 +21,6 @@ func apply(playerData: PlayerData) -> void:
 					playerData.happiness += value
 				StatEffect.StatType.MONEY:
 					playerData.money += value
+
+func should_repeat() -> bool:
+	return false
