@@ -1,28 +1,28 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1758635020
+::res://::1758712613
 export_presets.cfg::TextFile::-1::1758396639::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5176643333233221016::1758391720::1758633753::1::::<><><>0<>0<>b5f6e9af8b8bbecc25e8fb29f609a699<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://first prototype/::1758635210
-CardsController.gd::GDScript::394717768902340070::1758634015::0::1::::<>Node<><>0<>0<><>::
-EffectsController.gd::GDScript::6078186670320560241::1758635210::0::1::::<>Node<><>0<>0<><>::
-main.tscn::PackedScene::7259884180558231544::1758635274::0::1::::<><><>0<>0<><>::uid://bhofhx6bsyyj::::res://first prototype/PlayerData.gd<>uid://d0aqjr488e1te::::res://first prototype/objects/card.tscn<>uid://fvg7dim6f4cw::::res://first prototype/CardsController.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd<>uid://bcaperrwft7r4::::res://first prototype/Cards/TestCard.tres<>uid://c67slcxx5op5y::::res://first prototype/Cards/main.tres<>uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://bxny4ffbv1n4x::::res://first prototype/Cards/Job.tres<>uid://citmsq7g4xycn::::res://first prototype/ResourceClasses/TimeEffect.gd<>uid://b1darfg6yku4m::::res://first prototype/Cards/TestCard3.tres<>uid://dfdtd7qp82cd3::::res://first prototype/Cards/Hunger.tres<>uid://cquktsgu8heky::::res://first prototype/Cards/Salary.tres<>uid://csuk31p6r5liv::::res://first prototype/EffectsController.gd
-PlayerData.gd::GDScript::85498859389228889::1758634330::0::1::::PlayerData<>Node<><>0<>0<><>::
-::res://first prototype/Cards/::1758635167
-Hunger.tres::Resource/CardRes::7517560088966691282::1758635167::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
-Job.tres::Resource/CardRes::4029110264435569317::1758635167::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
-main.tres::Resource/CardRes::7015868299560744384::1758635167::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
-Salary.tres::Resource/CardRes::5937792476329990212::1758635167::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
-TestCard3.tres::Resource/CardRes::4217554383367070182::1758635167::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
-TestCard.tres::Resource/CardRes::2527717189201955271::1758635167::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BasicEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
-::res://first prototype/objects/::1758633860
+::res://first prototype/::1758712436
+CardsController.gd::GDScript::394717768902340070::1758712436::0::1::::<>Node<><>0<>0<><>::
+EffectsController.gd::GDScript::6078186670320560241::1758712436::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::7259884180558231544::1758712436::0::1::::<><><>0<>0<><>::uid://bhofhx6bsyyj::::res://first prototype/PlayerData.gd<>uid://d0aqjr488e1te::::res://first prototype/objects/card.tscn<>uid://fvg7dim6f4cw::::res://first prototype/CardsController.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd<>uid://bcaperrwft7r4::::res://first prototype/Cards/TestCard.tres<>uid://c67slcxx5op5y::::res://first prototype/Cards/main.tres<>uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://bxny4ffbv1n4x::::res://first prototype/Cards/Job.tres<>uid://citmsq7g4xycn::::res://first prototype/ResourceClasses/TimeEffect.gd<>uid://b1darfg6yku4m::::res://first prototype/Cards/TestCard3.tres<>uid://dfdtd7qp82cd3::::res://first prototype/Cards/Hunger.tres<>uid://cquktsgu8heky::::res://first prototype/Cards/Salary.tres<>uid://csuk31p6r5liv::::res://first prototype/EffectsController.gd
+PlayerData.gd::GDScript::85498859389228889::1758712436::0::1::::PlayerData<>Node<><>0<>0<><>::
+::res://first prototype/Cards/::1758712436
+Hunger.tres::Resource/CardRes::7517560088966691282::1758712436::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
+Job.tres::Resource/CardRes::4029110264435569317::1758712436::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
+main.tres::Resource/CardRes::7015868299560744384::1758712436::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
+Salary.tres::Resource/CardRes::5937792476329990212::1758712436::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
+TestCard3.tres::Resource/CardRes::4217554383367070182::1758712436::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
+TestCard.tres::Resource/CardRes::2527717189201955271::1758712436::0::1::::<><><>0<>0<><>::uid://1k8fc34xwh8h::::res://first prototype/ResourceClasses/BaseEffect.gd<>uid://bglbt362fxwyd::::res://first prototype/ResourceClasses/ChangeStatsEffect.gd<>uid://b3qfc0gvstbue::::res://first prototype/ResourceClasses/CardMetaData.gd
+::res://first prototype/objects/::1758712436
 anim_label.gd::GDScript::4788995364562903139::1758624928::0::1::::AnimatedIntLabel<>Label<><>0<>0<><>::
-card.gd::GDScript::8136794146460871518::1758633860::0::1::::CardNode<>HBoxContainer<><>0<>0<><>::
+card.gd::GDScript::8136794146460871518::1758712436::0::1::::CardNode<>HBoxContainer<><>0<>0<><>::
 card.tscn::PackedScene::8914971625299456770::1758624928::0::1::::<><><>0<>0<><>::uid://dn6r2tjmfa3r3::::res://first prototype/objects/card.gd<>uid://cf0utav6mkrt5::::res://icon.svg
-::res://first prototype/ResourceClasses/::1758634975
-BasicEffect.gd::GDScript::1847566451510718405::1758634676::0::1::::Effect<>Resource<><>1<>0<><>::
-CardMetaData.gd::GDScript::4385046829506133000::1758624928::0::1::::CardRes<>Resource<><>0<>0<><>::
-ChangeStatsEffect.gd::GDScript::2830358067670021683::1758634786::0::1::::StatEffect<>Effect<><>0<>0<><>::
-TimeEffect.gd::GDScript::5374336932140724345::1758634975::0::1::::TimeEffect<>Effect<><>0<>0<><>::
+::res://first prototype/ResourceClasses/::1758712436
+BaseEffect.gd::GDScript::1847566451510718405::1758712436::0::1::::Effect<>Resource<><>1<>0<><>::
+CardMetaData.gd::GDScript::4385046829506133000::1758712436::0::1::::CardRes<>Resource<><>0<>0<><>::
+ChangeStatsEffect.gd::GDScript::2830358067670021683::1758712436::0::1::::StatEffect<>Effect<><>0<>0<><>::
+TimeEffect.gd::GDScript::5374336932140724345::1758712436::0::1::::TimeEffect<>Effect<><>0<>0<><>::
 ::res://scenes/::1758463808
 card.gd::GDScript::4157418621436967945::1758463494::0::1::::Card<>RefCounted<><>0<>0<><>::
 network.gd::GDScript::4963868322683483539::1758463737::0::1::::<>Node<><>0<>0<><>::
