@@ -1,19 +1,19 @@
 [gd_scene load_steps=40 format=3 uid="uid://dbo0h46srxld5"]
 
-[ext_resource type="Script" uid="uid://bhofhx6bsyyj" path="res://first prototype/player_data.gd" id="1_qvj7q"]
+[ext_resource type="Script" uid="uid://bhofhx6bsyyj" path="res://first prototype/PlayerData.gd" id="1_qvj7q"]
 [ext_resource type="PackedScene" uid="uid://d0aqjr488e1te" path="res://first prototype/objects/card.tscn" id="2_3rryu"]
-[ext_resource type="Script" uid="uid://fvg7dim6f4cw" path="res://first prototype/deck_controller.gd" id="2_bbj7l"]
-[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/card meta data.gd" id="3_n2ms6"]
+[ext_resource type="Script" uid="uid://fvg7dim6f4cw" path="res://first prototype/CardsController.gd" id="2_bbj7l"]
+[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/CardMetaData.gd" id="3_n2ms6"]
 [ext_resource type="Resource" uid="uid://bcaperrwft7r4" path="res://first prototype/Cards/TestCard.tres" id="3_si4ni"]
 [ext_resource type="Resource" uid="uid://c67slcxx5op5y" path="res://first prototype/Cards/main.tres" id="4_opuq4"]
-[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BasicEffect.gd" id="4_pei0g"]
+[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BaseEffect.gd" id="4_pei0g"]
 [ext_resource type="Script" uid="uid://bglbt362fxwyd" path="res://first prototype/ResourceClasses/ChangeStatsEffect.gd" id="5_opuq4"]
 [ext_resource type="Resource" uid="uid://bxny4ffbv1n4x" path="res://first prototype/Cards/Job.tres" id="6_bajvb"]
 [ext_resource type="Script" uid="uid://citmsq7g4xycn" path="res://first prototype/ResourceClasses/TimeEffect.gd" id="7_bajvb"]
 [ext_resource type="Resource" uid="uid://b1darfg6yku4m" path="res://first prototype/Cards/TestCard3.tres" id="7_qw4h1"]
 [ext_resource type="Resource" uid="uid://dfdtd7qp82cd3" path="res://first prototype/Cards/Hunger.tres" id="9_d5e8v"]
 [ext_resource type="Resource" uid="uid://cquktsgu8heky" path="res://first prototype/Cards/Salary.tres" id="10_tlhdv"]
-[ext_resource type="Script" uid="uid://csuk31p6r5liv" path="res://first prototype/long_time_effect_system.gd" id="13_opuq4"]
+[ext_resource type="Script" uid="uid://csuk31p6r5liv" path="res://first prototype/EffectsController.gd" id="13_opuq4"]
 
 [sub_resource type="Resource" id="Resource_qw4h1"]
 script = ExtResource("5_opuq4")
@@ -206,7 +206,7 @@ grow_vertical = 2
 [node name="PlayerData" type="Node" parent="."]
 script = ExtResource("1_qvj7q")
 
-[node name="DeckController" type="Node" parent="." node_paths=PackedStringArray("current_card")]
+[node name="CardsController" type="Node" parent="." node_paths=PackedStringArray("current_card")]
 script = ExtResource("2_bbj7l")
 current_card = NodePath("../MarginContainer/CardSystem")
 card_meta_array = Array[ExtResource("3_n2ms6")]([ExtResource("4_opuq4"), ExtResource("6_bajvb"), SubResource("Resource_rvxpb"), SubResource("Resource_bd61p")])
@@ -259,14 +259,14 @@ vertical_alignment = 1
 script = SubResource("GDScript_0ba0g")
 metadata/_custom_type_script = "uid://cah3b3nmtbaop"
 
-[node name="LongTimeEffectSystem" type="Node" parent="."]
+[node name="EffectsController" type="Node" parent="." node_paths=PackedStringArray("playerData")]
 script = ExtResource("13_opuq4")
+playerData = NodePath("../PlayerData")
 
 [connection signal="family_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/FM" method="_on_player_data_family_changed"]
 [connection signal="happiness_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/Happy" method="_on_player_data_happiness_changed"]
 [connection signal="health_changed" from="PlayerData" to="MarginContainer/HBoxContainer2/HP" method="_on_player_data_health_changed"]
 [connection signal="money_changed" from="PlayerData" to="MarginContainer/MONEY" method="_on_player_data_money_changed"]
 [connection signal="choice_made" from="MarginContainer/CardSystem" to="PlayerData" method="apply_effects"]
-[connection signal="choice_made" from="MarginContainer/CardSystem" to="DeckController" method="_on_h_box_container_choice_made"]
-[connection signal="choice_made" from="MarginContainer/CardSystem" to="LongTimeEffectSystem" method="_on_card_system_choice_made"]
-[connection signal="apply_effects" from="LongTimeEffectSystem" to="PlayerData" method="apply_effects"]
+[connection signal="choice_made" from="MarginContainer/CardSystem" to="CardsController" method="_on_card_system_choice_made"]
+[connection signal="choice_made" from="MarginContainer/CardSystem" to="EffectsController" method="_on_card_system_choice_made"]

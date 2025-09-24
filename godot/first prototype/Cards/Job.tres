@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="CardRes" load_steps=8 format=3 uid="uid://bxny4ffbv1n4x"]
 
-[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BasicEffect.gd" id="1_ad7w0"]
+[ext_resource type="Script" uid="uid://1k8fc34xwh8h" path="res://first prototype/ResourceClasses/BaseEffect.gd" id="1_ad7w0"]
 [ext_resource type="Script" uid="uid://bglbt362fxwyd" path="res://first prototype/ResourceClasses/ChangeStatsEffect.gd" id="2_3lnbp"]
-[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/card meta data.gd" id="3_t5i1t"]
+[ext_resource type="Script" uid="uid://b3qfc0gvstbue" path="res://first prototype/ResourceClasses/CardMetaData.gd" id="3_t5i1t"]
 
 [sub_resource type="Resource" id="Resource_anyg6"]
 script = ExtResource("2_3lnbp")
 value = -15
+stat_type = null
 metadata/_custom_type_script = "uid://bglbt362fxwyd"
 
 [sub_resource type="Resource" id="Resource_64687"]
