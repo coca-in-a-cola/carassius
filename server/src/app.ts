@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 
-import type MessageResponse from './interfaces/message-response';
+import type MessageResponse from './shared/message-response';
 
 import api from './api';
 import * as middlewares from './middlewares';

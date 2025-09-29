@@ -1,6 +1,6 @@
 import express from 'express';
 
-import type MessageResponse from '../interfaces/message-response.js';
+import type MessageResponse from '../shared/message-response.js';
 
 import emojis from './emojis.js';
 
