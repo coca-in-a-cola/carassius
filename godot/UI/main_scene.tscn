@@ -1,0 +1,240 @@
+[gd_scene load_steps=22 format=3 uid="uid://i4u5f7kq4wm"]
+
+[ext_resource type="Texture2D" uid="uid://cn0jes5fq3x75" path="res://UI/assets/Logo original.png" id="1_h8lhh"]
+[ext_resource type="Texture2D" uid="uid://d07iyr0vbtgov" path="res://UI/assets/Money.png" id="1_van8x"]
+[ext_resource type="PackedScene" uid="uid://bvcmwukk274c1" path="res://UI/ui_objects/main_button.tscn" id="1_w6t5s"]
+[ext_resource type="Texture2D" uid="uid://b0wjjqpqaccxn" path="res://UI/assets/Group 8.png" id="2_adsr2"]
+[ext_resource type="Texture2D" uid="uid://dqw43yxxoev5f" path="res://UI/assets/Grid.png" id="2_ujufd"]
+[ext_resource type="Texture2D" uid="uid://m2rtbuxveo73" path="res://UI/assets/Group 9.png" id="3_uphuk"]
+[ext_resource type="Texture2D" uid="uid://bjei5a46qsvjr" path="res://UI/assets/Ellipse 1.png" id="4_kh1fh"]
+[ext_resource type="Texture2D" uid="uid://dovgd4lysa3xl" path="res://UI/assets/image 8.png" id="5_0h5rb"]
+[ext_resource type="Texture2D" uid="uid://ce602t13xbsde" path="res://UI/assets/Menu 3.png" id="6_van8x"]
+[ext_resource type="Texture2D" uid="uid://dcy1536lel8np" path="res://UI/assets/Avatar.png" id="7_adsr2"]
+
+[sub_resource type="Gradient" id="Gradient_ujufd"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eprtr"]
+gradient = SubResource("Gradient_ujufd")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_uphuk"]
+colors = PackedColorArray(0.16470589, 0.16470589, 0.16470589, 0.2627451, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_grl2c"]
+gradient = SubResource("Gradient_uphuk")
+fill_from = Vector2(0.53276354, 1)
+fill_to = Vector2(0.52421653, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_grl2c"]
+font_size = 24
+font_color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f4rtx"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eprtr"]
+atlas = ExtResource("2_ujufd")
+region = Rect2(136, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e28vo"]
+atlas = ExtResource("2_ujufd")
+region = Rect2(272, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uthp"]
+atlas = ExtResource("2_ujufd")
+region = Rect2(0, 136, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk3jj"]
+atlas = ExtResource("2_ujufd")
+region = Rect2(136, 136, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8lhh"]
+atlas = ExtResource("2_ujufd")
+region = Rect2(272, 136, 128, 128)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_eprtr")
+
+[node name="MainContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="StatsBackground" type="TextureRect" parent="TextureRect/MainContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = SubResource("GradientTexture2D_grl2c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_van8x")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "99 999 999"
+label_settings = SubResource("LabelSettings_grl2c")
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_adsr2")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "99 "
+label_settings = SubResource("LabelSettings_grl2c")
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_uphuk")
+expand_mode = 3
+
+[node name="Label3" type="Label" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "99 "
+label_settings = SubResource("LabelSettings_grl2c")
+vertical_alignment = 1
+
+[node name="Logo" type="TextureRect" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_h8lhh")
+expand_mode = 5
+
+[node name="StateLabel" type="Label" parent="TextureRect/MainContainer"]
+layout_mode = 2
+text = "Чем займётся Дмитрий сегодня?"
+label_settings = SubResource("LabelSettings_f4rtx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainButtons" type="GridContainer" parent="TextureRect/MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="WorkButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("1_w6t5s")]
+layout_mode = 2
+
+[node name="FamilyButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("1_w6t5s")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_eprtr")
+
+[node name="HealthButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("1_w6t5s")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_e28vo")
+
+[node name="LeavsButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("1_w6t5s")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_4uthp")
+
+[node name="KaminButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("1_w6t5s")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_fk3jj")
+
+[node name="FinanceButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("1_w6t5s")]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_h8lhh")
+
+[node name="MoneyBackground" type="TextureRect" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(225, 225)
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("4_kh1fh")
+expand_mode = 1
+
+[node name="MoneyButton" type="TextureButton" parent="TextureRect/MainContainer/MoneyBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -104.0
+offset_right = 104.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_0h5rb")
+stretch_mode = 0
+
+[node name="DownerPanel" type="Control" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(0, 225)
+layout_mode = 2
+
+[node name="MenuButton" type="TextureButton" parent="TextureRect/MainContainer/DownerPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -61.0
+offset_right = 96.0
+offset_bottom = 61.0
+grow_vertical = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("6_van8x")
+
+[node name="ProfileButton" type="TextureButton" parent="TextureRect/MainContainer/DownerPanel"]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -61.0
+offset_right = 61.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("7_adsr2")
+stretch_mode = 0

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvcmwukk274c1"]
+
+[ext_resource type="Texture2D" uid="uid://dqw43yxxoev5f" path="res://UI/assets/Grid.png" id="1_esm7t"]
+[ext_resource type="Texture2D" uid="uid://cj0l3m42feads" path="res://UI/assets/Category.png" id="2_tiugc"]
+[ext_resource type="Texture2D" uid="uid://dj65pen0ttx6e" path="res://UI/assets/Frame 13.png" id="3_uadc3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqa5x"]
+atlas = ExtResource("1_esm7t")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_esm7t"]
+font_size = 24
+font_color = Color(0.14044744, 0.14044744, 0.14044744, 1)
+
+[node name="TextureButton" type="TextureButton"]
+custom_minimum_size = Vector2(150, 150)
+texture_normal = SubResource("AtlasTexture_yqa5x")
+texture_disabled = ExtResource("2_tiugc")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture = ExtResource("3_uadc3")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "99+"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Работа"
+label_settings = SubResource("LabelSettings_esm7t")
+horizontal_alignment = 1
