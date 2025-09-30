@@ -1,4 +1,4 @@
-import { DataClass, prop } from './data/dataclass.model';
+import { DataClass, prop } from './data';
 
 export class PlayerCardRecord extends DataClass {
   @prop(Number) cardId = null;
