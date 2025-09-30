@@ -9,12 +9,11 @@
     "url": "https://github.com/w3cj/express-api-starter-ts.git"
   },
   "keywords": [],
-  "main": "src/index.ts",
   "scripts": {
-    "start": "node dist/src/index.js",
-    "dev": "tsx watch server/src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "tsx watch server/index.ts",
     "build": "tsc",
-    "lint": "eslint --fix server/src",
+    "lint": "eslint --fix server",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

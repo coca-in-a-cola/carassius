@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ES2022",
     "module": "nodenext",
     "strict": true,
     "noImplicitAny": true,
@@ -9,10 +9,19 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "experimentalDecorators": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "importHelpers": true,
+    "baseUrl": "./server",
+    "paths": {
+      "@server/*": [
+        "./*"
+      ],
+    }
   },
   "include": [
     "./*.js",
-    "server/src/**/*.ts"
-  ]
+    "server/**/*.ts"
+  ],
 }

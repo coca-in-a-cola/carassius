@@ -1,6 +1,6 @@
 import { DataClass, prop } from './data';
 
 export class PlayerCardRecord extends DataClass {
-  @prop(Number) cardId = null;
-  @prop(Boolean) approved = false;
+  @prop(Number) cardId!: number;
+  @prop(Boolean) approved!: boolean;
 }

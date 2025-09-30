@@ -1,0 +1,5 @@
+id,statId,statValue,money,delay,repeatCount,clearEffectId
+1,health,1,,0,,
+2,spirit,-1,,,2,
+3,,,1000,1,,4
+4,,,-1000,,-1,

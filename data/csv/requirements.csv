@@ -1,0 +1,5 @@
+id,cardRequirements,statId,statValue,money,operator
+1,,health,50,,>
+2,,,,,
+3,,,,100000,>
+4,[1],spirit,50,,<
