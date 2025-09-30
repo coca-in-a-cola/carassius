@@ -22,8 +22,10 @@ Utils="*res://scenes/utils.gd"
 
 [display]
 
-window/size/viewport_width=680
+window/size/viewport_width=540
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 
