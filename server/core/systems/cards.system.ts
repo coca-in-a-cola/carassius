@@ -1,4 +1,5 @@
 import { Player, Card, CardCategory, PlayerCardRecord } from '@server/core/models';
+import { requirementSystem } from './requirements.system';
 
 class CardSystem {
   private cards: Map<number, Card> = new Map();
@@ -29,11 +30,19 @@ class CardSystem {
       throw new Error('Сначала ответьте на текущую карту');
     }
 
-    const randomIndex = Math.floor(Math.random() * categoryCards.length);
-    const selectedCard = categoryCards[randomIndex];
+    // Фильтруем карты по требованиям
+    const availableCards = categoryCards.filter(card =>
+      this.checkCardRequirements(player, card)
+    );
+
+    if (availableCards.length === 0) {
+      throw new Error(`Нет доступных карт в категории ${category} для игрока`);
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableCards.length);
+    const selectedCard = availableCards[randomIndex];
 
     player.selectedCard = selectedCard;
-
     return player;
   }
 
@@ -69,14 +78,18 @@ class CardSystem {
     return this.cards.size;
   }
 
-  public checkCardRequirements(cardId: number, player: Player): boolean {
-    const card = this.getCardById(cardId);
-    return !card || card.requirements.length === 0;
+  public checkCardRequirements(player: Player, card: Card): boolean {
+    return requirementSystem.checkRequirements(player, card.requirements);
   }
 
   public getAvailableCardsForPlayer(category: CardCategory, player: Player): Card[] {
     const categoryCards = this.getCardsByCategory(category);
-    return categoryCards.filter(card => this.checkCardRequirements(card.id, player));
+    return categoryCards.filter(card => this.checkCardRequirements(player, card));
+  }
+
+  public getFailedRequirementsForCard(player: Player, cardId: number): number[] {
+    const card = this.getCardById(cardId);
+    return card ? requirementSystem.getFailedRequirements(player, card.requirements) : [];
   }
 }
 

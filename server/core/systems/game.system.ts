@@ -1,6 +1,7 @@
 import { Player, GameData, CardCategory } from '@server/core/models';
 import { cardSystem } from './cards.system';
 import { effectSystem } from './effects.system';
+import { requirementSystem } from './requirements.system';
 
 class GameSystem {
   private players: Map<string, Player> = new Map();
@@ -8,6 +9,7 @@ class GameSystem {
   public initialize(gameData: GameData): void {
     cardSystem.initialize(gameData.cards);
     effectSystem.initialize(gameData.effects);
+    requirementSystem.initialize(gameData.requirements);
 
     // Test player
     this.registerPlayer(new Player({

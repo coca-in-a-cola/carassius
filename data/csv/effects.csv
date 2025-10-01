@@ -35,3 +35,4 @@ id,statId,statValue,money,delay,repeatCount,clearEffectId
 34,,,-100,30,100,
 35,,,-1000,30,100,
 36,,,-10000,30,100,
+37,,,100000,,,

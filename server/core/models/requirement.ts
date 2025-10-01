@@ -8,7 +8,13 @@ export class Requirement extends DataClass {
   statId!: string;
 
   @arrayOf() @prop(Number) @defaultValue([])
-  cardRequirement!: number[];
+  selectedYes!: number[];
+
+  @arrayOf() @prop(Number) @defaultValue([])
+  selectedNo!: number[];
+
+  @arrayOf() @prop(Number) @defaultValue([])
+  effectRequirements!: number[];
 
   @prop(Number) @defaultValue(null)
   money!: number | null;
