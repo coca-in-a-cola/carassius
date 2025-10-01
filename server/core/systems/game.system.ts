@@ -1,11 +1,13 @@
 import { Player, GameData, CardCategory } from '@server/core/models';
 import { cardSystem } from './cards.system';
+import { effectSystem } from './effects.system';
 
 class GameSystem {
   private players: Map<string, Player> = new Map();
 
   public initialize(gameData: GameData): void {
     cardSystem.initialize(gameData.cards);
+    effectSystem.initialize(gameData.effects);
 
     // Test player
     this.registerPlayer(new Player({
@@ -37,8 +39,21 @@ class GameSystem {
     return cardSystem.select(player, category);
   }
 
-  public apply(player: Player, approved: boolean) {
-    return cardSystem.applyChoice(player, approved);
+  public apply(player: Player, approved: boolean): Player {
+    const effectIds = approved ?
+      player.selectedCard!.yesEffects :
+      player.selectedCard!.noEffects;
+
+    player = cardSystem.applyChoice(player, approved);
+    player = effectSystem.applyEffects(player, effectIds);
+    player = this.nextDay(player);
+    return player;
+  }
+
+  public nextDay(player: Player): Player {
+    player.day++;
+    effectSystem.processDayEffects(player);
+    return player;
   }
 
   public clear(): void {

@@ -3,6 +3,7 @@ import { Stat } from './stat';
 import { arrayOf, DataClass, defaultValue, prop } from './data';
 import { PlayerCardRecord } from './card-record';
 import { Card } from './card';
+import { PlayerActiveEffect } from './effect/player-active-effect';
 
 export class Player extends DataClass {
   static players: Record<string, Player> = {};
@@ -31,4 +32,7 @@ export class Player extends DataClass {
 
   @arrayOf() @prop(PlayerCardRecord) @defaultValue([])
   public history!: PlayerCardRecord[];
+
+  @arrayOf() @prop(PlayerActiveEffect) @defaultValue([])
+  public activeEffects!: PlayerActiveEffect[];
 }

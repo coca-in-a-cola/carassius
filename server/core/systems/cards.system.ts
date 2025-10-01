@@ -42,13 +42,9 @@ class CardSystem {
       throw new Error('No card selected');
     }
 
-    // TODO: Применить эффекты
-    // const effects = cardSystem.getCardEffects(player.selectedCardId, choice);
-    // effectSystem.applyEffects(player, effects);
-
     player.history.push(new PlayerCardRecord({
       cardId: player.selectedCard.id,
-      approved,
+      approved: !!approved,
       day: player.day,
       timestamp: new Date()
     }));

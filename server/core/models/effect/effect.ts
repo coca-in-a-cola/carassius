@@ -1,4 +1,4 @@
-import { DataClass, prop } from './data';
+import { DataClass, prop } from '../data';
 
 export class Effect extends DataClass {
   @prop(Number) id!: number | null;
