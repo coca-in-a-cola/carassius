@@ -3,9 +3,9 @@ import express, { Router } from 'express';
 import helmet from 'helmet';
 import path from 'path';
 import * as middlewares from './middlewares';
-import { setupGameRoutes } from './game/game.routes';
 import { gameSystem } from './core/systems';
 import { dataLoaderService } from './shared/services';
+import { setApiRoutes } from './api/api.routes';
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.json());
 
 const router = Router();
-setupGameRoutes(router);
+setApiRoutes(router);
 
 app.use('/api', router);
 
@@ -41,6 +41,7 @@ app.get('/*splat', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
+app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
 
 dataLoaderService.load().then((data) => {

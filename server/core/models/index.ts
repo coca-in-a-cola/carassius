@@ -6,3 +6,4 @@ export * from './stat';
 export * from './player';
 export * from './requirement';
 export * from './game';
+import './declare';

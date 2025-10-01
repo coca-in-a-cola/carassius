@@ -1,17 +1,13 @@
 import { Player } from '@server/core';
 import { GameStartResponse } from './game.models';
+import { gameSystem } from '@server/core/systems/game.system';
 
 export class GameService {
-  /**
-   * Начинает новую игру и создает игрока
-   */
   public startNewGame(): GameStartResponse {
     try {
       // Создаем нового игрока
       const player = Player.create();
-
-      // Сохраняем игрока в памяти приложения
-      Player.players[player.uuid] = player;
+      gameSystem.registerPlayer(player);
 
       return {
         player,
@@ -22,11 +18,8 @@ export class GameService {
     }
   }
 
-  /**
-   * Получает игрока по UUID
-   */
   public getPlayer(uuid: string): Player | null {
-    const player = Player.findByUUID(uuid);
+    const player = gameSystem.getPlayer(uuid);
     if (!player) {
       return null;
     }
@@ -34,11 +27,8 @@ export class GameService {
     return player;
   }
 
-  /**
-   * Получает количество активных игроков (для отладки)
-   */
   public getActivePlayersCount(): number {
-    return Object.keys(Player.players).length;
+    return gameSystem.getSystemStats().totalPlayers;
   }
 }
 

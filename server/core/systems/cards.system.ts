@@ -1,4 +1,4 @@
-import { Player, Card, CardCategory } from '@server/core/models';
+import { Player, Card, CardCategory, PlayerCardRecord } from '@server/core/models';
 
 class CardSystem {
   private cards: Map<number, Card> = new Map();
@@ -18,22 +18,43 @@ class CardSystem {
     });
   }
 
-  public select(category: CardCategory): { card: Card | null; error?: string } {
+  public select(player: Player, category: CardCategory): Player {
     const categoryCards = this.cardsByCategory.get(category);
 
     if (!categoryCards || categoryCards.length === 0) {
-      return {
-        card: null,
-        error: `Нет доступных карт в категории: ${category}`
-      };
+      throw new Error(`Нет доступных карт в категории: ${category}`);
+    }
+
+    if (player.selectedCard) {
+      throw new Error('Сначала ответьте на текущую карту');
     }
 
     const randomIndex = Math.floor(Math.random() * categoryCards.length);
     const selectedCard = categoryCards[randomIndex];
 
-    return {
-      card: selectedCard
-    };
+    player.selectedCard = selectedCard;
+
+    return player;
+  }
+
+  public applyChoice(player: Player, approved: boolean): Player {
+    if (!player.selectedCard) {
+      throw new Error('No card selected');
+    }
+
+    // TODO: Применить эффекты
+    // const effects = cardSystem.getCardEffects(player.selectedCardId, choice);
+    // effectSystem.applyEffects(player, effects);
+
+    player.history.push(new PlayerCardRecord({
+      cardId: player.selectedCard.id,
+      approved,
+      day: player.day,
+      timestamp: new Date()
+    }));
+    player.selectedCard = null;
+
+    return player;
   }
 
   public getCardById(cardId: number): Card | null {

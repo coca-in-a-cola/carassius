@@ -6,6 +6,11 @@ class GameSystem {
 
   public initialize(gameData: GameData): void {
     cardSystem.initialize(gameData.cards);
+
+    // Test player
+    this.registerPlayer(new Player({
+      uuid: '0199a11b-c074-719c-9aed-e6abdf7b1483'
+    }));
   }
 
   public registerPlayer(player: Player): void {
@@ -28,31 +33,12 @@ class GameSystem {
     };
   }
 
-  public selectCardForPlayer(category: CardCategory, playerUuid: string) {
-    const player = this.getPlayer(playerUuid);
-    if (!player) {
-      return {
-        card: null,
-        error: 'Игрок не найден'
-      };
-    }
+  public select(player: Player, category: CardCategory) {
+    return cardSystem.select(player, category);
+  }
 
-    const availableCards = cardSystem.getAvailableCardsForPlayer(category, player);
-
-    if (availableCards.length === 0) {
-      return {
-        card: null,
-        error: `Нет доступных карт в категории ${category} для игрока`
-      };
-    }
-
-    const randomIndex = Math.floor(Math.random() * availableCards.length);
-    const selectedCard = availableCards[randomIndex];
-
-    return {
-      card: selectedCard,
-      availableOptions: availableCards.length
-    };
+  public apply(player: Player, approved: boolean) {
+    return cardSystem.applyChoice(player, approved);
   }
 
   public clear(): void {

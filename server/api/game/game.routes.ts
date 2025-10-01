@@ -6,3 +6,4 @@ export function setupGameRoutes(router: Router): void {
   router.get('/player/:uuid', gameController.getPlayer);
   router.get('/status', gameController.getGameStatus);
 }
+

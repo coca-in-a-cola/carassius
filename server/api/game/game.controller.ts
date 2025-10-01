@@ -3,11 +3,7 @@ import { gameService } from './game.service';
 import { GameStartResponse } from './game.models';
 
 export class GameController {
-  /**
-   * POST /api/game/start
-   * Начинает новую игру
-   */
-  public startNewGame = async (req: Request, res: Response): Promise<void> => {
+  public startNewGame = async (req: Request, res: Response): Promise<any> => {
     try {
       const result: GameStartResponse = gameService.startNewGame();
 
@@ -26,11 +22,7 @@ export class GameController {
     }
   };
 
-  /**
-   * GET /api/game/player/:uuid
-   * Получает данные игрока по UUID
-   */
-  public getPlayer = async (req: Request, res: Response): Promise<void> => {
+  public getPlayer = async (req: Request, res: Response): Promise<any> => {
     try {
       const { uuid } = req.params;
 
@@ -67,11 +59,7 @@ export class GameController {
     }
   };
 
-  /**
-   * GET /api/game/status
-   * Получает статус игры (для отладки)
-   */
-  public getGameStatus = async (req: Request, res: Response): Promise<void> => {
+  public getGameStatus = async (req: Request, res: Response): Promise<any> => {
     try {
       const activePlayers = gameService.getActivePlayersCount();
 

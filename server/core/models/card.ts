@@ -1,6 +1,6 @@
 import { arrayOf, DataClass, defaultValue, prop } from './data';
 
-export const enum CardCategory {
+export enum CardCategory {
   WORK = 'work',
   FAMILY = 'family',
   MEDICINE = 'medicine',

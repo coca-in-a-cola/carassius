@@ -2,16 +2,12 @@ import { v7 as uuid } from 'uuid';
 import { Stat } from './stat';
 import { arrayOf, DataClass, defaultValue, prop } from './data';
 import { PlayerCardRecord } from './card-record';
+import { Card } from './card';
 
 export class Player extends DataClass {
   static players: Record<string, Player> = {};
 
-  static findByUUID(uid: string): Player | null {
-    return this.players[uid];
-  }
-
   static create() {
-    console.log(new Player());
     return new Player();
   }
 
@@ -30,8 +26,8 @@ export class Player extends DataClass {
   @prop(Number) @defaultValue(1)
   public day!: number;
 
-  @prop(Number) @defaultValue(null)
-  public selectedCardId!: number;
+  @prop(Card) @defaultValue(null)
+  public selectedCard!: Card | null;
 
   @arrayOf() @prop(PlayerCardRecord) @defaultValue([])
   public history!: PlayerCardRecord[];
