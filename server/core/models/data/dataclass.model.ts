@@ -121,7 +121,7 @@ export class DataClass implements DeserializableNullish, SerializableTo<object> 
         continue;
       }
 
-      result[key] = DataClass.parseProp(props, key, input[key]);
+      result[key] = DataClass.parseProp(props, key, input[key]) || result[key];
     }
 
     Object.assign(this, result);

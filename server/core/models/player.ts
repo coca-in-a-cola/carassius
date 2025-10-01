@@ -11,6 +11,7 @@ export class Player extends DataClass {
   }
 
   static create() {
+    console.log(new Player());
     return new Player();
   }
 
