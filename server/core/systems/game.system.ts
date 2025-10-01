@@ -6,7 +6,6 @@ class GameSystem {
 
   public initialize(gameData: GameData): void {
     cardSystem.initialize(gameData.cards);
-    console.log(`GameSystem инициализирован с ${gameData.cards.length} картами`);
   }
 
   public registerPlayer(player: Player): void {
