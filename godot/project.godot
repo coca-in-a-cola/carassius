@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="Carassius"
-run/main_scene="uid://dbo0h46srxld5"
+run/main_scene="uid://i4u5f7kq4wm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Network="*res://scenes/network.gd"
-Utils="*res://scenes/utils.gd"
 
 [display]
 
@@ -32,3 +31,4 @@ window/stretch/aspect="expand"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+anti_aliasing/main_scene="uid://i4u5f7kq4wm"
