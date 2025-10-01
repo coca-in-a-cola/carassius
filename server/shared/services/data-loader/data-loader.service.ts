@@ -1,9 +1,8 @@
 import Papa from 'papaparse';
-import { Card, DataClass, Effect, Requirement } from '@server/core';
+import { Card, DataClass, Effect, Requirement, GameData } from '@server/core';
 import { createReadStream } from 'node:fs';
 import path from 'node:path';
 import { DATA_PATH } from './data-loader.constants';
-import { GameData } from './data-loader.models';
 
 export class DataLoaderService {
 

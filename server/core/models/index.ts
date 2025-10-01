@@ -5,3 +5,4 @@ export * from './card-record';
 export * from './stat';
 export * from './player';
 export * from './requirement';
+export * from './game';
