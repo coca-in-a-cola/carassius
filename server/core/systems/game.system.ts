@@ -1,4 +1,4 @@
-import { Player, GameData, CardCategory } from '@server/core/models';
+import { Player, GameData, CardCategory } from '../../core/models';
 import { cardSystem } from './cards.system';
 import { effectSystem } from './effects.system';
 import { requirementSystem } from './requirements.system';

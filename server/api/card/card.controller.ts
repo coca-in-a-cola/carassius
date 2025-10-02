@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { CardCategory } from '@server/core/models';
-import { gameSystem } from '@server/core/systems';
+import { CardCategory } from '../../core/models';
+import { gameSystem } from '../../core/systems';
 
 class CardController {
   public selectCard = async (req: Request, res: Response): Promise<void> => {

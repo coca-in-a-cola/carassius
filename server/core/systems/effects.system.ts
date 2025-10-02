@@ -1,4 +1,4 @@
-import { Player, Effect, PlayerActiveEffect } from '@server/core/models';
+import { Player, Effect, PlayerActiveEffect } from '../../core/models';
 
 class EffectSystem {
   private effects: Map<number, Effect> = new Map();

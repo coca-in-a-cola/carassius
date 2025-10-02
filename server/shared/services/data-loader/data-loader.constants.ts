@@ -1,1 +1,1 @@
-export const DATA_PATH = './data/csv'; // TODO: мб в .env засунуть
+export const DATA_PATH = './csv'; // TODO: мб в .env засунуть

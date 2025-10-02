@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { Card, DataClass, Effect, Requirement, GameData } from '@server/core';
+import { Card, DataClass, Effect, Requirement, GameData } from '../../../core';
 import { createReadStream } from 'node:fs';
 import path from 'node:path';
 import { DATA_PATH } from './data-loader.constants';
@@ -24,10 +24,12 @@ export class DataLoaderService {
   }
 
   public async load(): Promise<GameData> {
-    const cards = await this.parsePath<Card>(path.join(DATA_PATH, 'cards.csv'), Card);
-    const effects = await this.parsePath<Effect>(path.join(DATA_PATH, 'effects.csv'), Effect);
-    const requirements = await this.parsePath<Requirement>(path.join(DATA_PATH, 'requirements.csv'), Requirement);
+    const pathFromRoot = path.join(__dirname, '..', '..', '..', DATA_PATH);
+    const cards = await this.parsePath<Card>(path.join(pathFromRoot, 'cards.csv'), Card);
+    const effects = await this.parsePath<Effect>(path.join(pathFromRoot, 'effects.csv'), Effect);
+    const requirements = await this.parsePath<Requirement>(path.join(pathFromRoot, 'requirements.csv'), Requirement);
 
+    console.log(`Reading csv directory ${pathFromRoot}`);
     return { cards, effects, requirements };
   }
 
