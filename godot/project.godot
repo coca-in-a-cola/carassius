@@ -23,7 +23,7 @@ Network="*res://scenes/network.gd"
 
 window/size/viewport_width=430
 window/size/viewport_height=932
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [rendering]
