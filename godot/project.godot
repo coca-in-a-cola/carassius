@@ -25,6 +25,7 @@ window/size/viewport_width=430
 window/size/viewport_height=932
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=1
 
 [rendering]
 
