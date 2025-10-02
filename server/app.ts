@@ -26,7 +26,6 @@ setApiRoutes(router);
 
 app.use('/api', router);
 
-
 app.use('/', express.static(path.join(__dirname, '../build')));
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: false, limit: '5mb' }));
