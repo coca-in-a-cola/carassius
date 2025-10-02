@@ -1,15 +1,22 @@
-[gd_scene load_steps=22 format=3 uid="uid://i4u5f7kq4wm"]
+[gd_scene load_steps=33 format=3 uid="uid://i4u5f7kq4wm"]
 
+[ext_resource type="Texture2D" uid="uid://dkryyynexlrdq" path="res://UI/assets/Header.png" id="1_0h7de"]
 [ext_resource type="Texture2D" uid="uid://d07iyr0vbtgov" path="res://UI/assets/Money.png" id="1_w4lj1"]
 [ext_resource type="Texture2D" uid="uid://b0wjjqpqaccxn" path="res://UI/assets/Group 8.png" id="2_0h7de"]
 [ext_resource type="Texture2D" uid="uid://m2rtbuxveo73" path="res://UI/assets/Group 9.png" id="3_3mcv8"]
+[ext_resource type="FontFile" uid="uid://d3orih261k284" path="res://UI/fonts/Halvar Breitschrift-Bold-Desktop.otf" id="3_a1617"]
 [ext_resource type="Texture2D" uid="uid://cn0jes5fq3x75" path="res://UI/assets/Logo original.png" id="4_a1617"]
 [ext_resource type="PackedScene" uid="uid://bvcmwukk274c1" path="res://UI/ui_objects/main_button.tscn" id="5_cf2is"]
 [ext_resource type="Texture2D" uid="uid://dqw43yxxoev5f" path="res://UI/assets/Grid.png" id="6_wlnme"]
+[ext_resource type="FontFile" uid="uid://cllcsorat757d" path="res://UI/fonts/Gazprombank Sans DemiBold.otf" id="7_cf2is"]
 [ext_resource type="Texture2D" uid="uid://bjei5a46qsvjr" path="res://UI/assets/Ellipse 1.png" id="7_fnvwe"]
 [ext_resource type="Texture2D" uid="uid://dovgd4lysa3xl" path="res://UI/assets/image 8.png" id="8_kdg7e"]
 [ext_resource type="Texture2D" uid="uid://b270owbt40set" path="res://UI/assets/Menu 3.svg" id="9_2sral"]
 [ext_resource type="Texture2D" uid="uid://dcy1536lel8np" path="res://UI/assets/Avatar.png" id="10_3co8r"]
+[ext_resource type="Texture2D" uid="uid://bdrql67fsaakt" path="res://UI/assets/Frame 23.png" id="14_wlnme"]
+[ext_resource type="FontFile" uid="uid://dc1rihen611sc" path="res://UI/fonts/Halvar Breitschrift-Medium-Desktop.otf" id="15_fnvwe"]
+[ext_resource type="Texture2D" uid="uid://b0gedsh7o6bpt" path="res://UI/assets/Frame 25.png" id="16_kdg7e"]
+[ext_resource type="Texture2D" uid="uid://d4i2oa7s87lu4" path="res://UI/assets/Frame 26.png" id="17_2sral"]
 
 [sub_resource type="Gradient" id="Gradient_ujufd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -18,19 +25,23 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_ujufd")
 fill_to = Vector2(1, 1)
 
-[sub_resource type="Gradient" id="Gradient_uphuk"]
-colors = PackedColorArray(0.16470589, 0.16470589, 0.16470589, 0.2627451, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_grl2c"]
-gradient = SubResource("Gradient_uphuk")
-fill_from = Vector2(0.53276354, 1)
-fill_to = Vector2(0.52421653, 0)
-
 [sub_resource type="LabelSettings" id="LabelSettings_grl2c"]
+font = ExtResource("3_a1617")
 font_size = 24
-font_color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+font_color = Color(0.4392157, 1, 0.79607844, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wlnme"]
+font = ExtResource("3_a1617")
+font_size = 24
+font_color = Color(0.2901961, 0.2901961, 0.9490196, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fnvwe"]
+font = ExtResource("3_a1617")
+font_size = 24
+font_color = Color(1, 0.62352943, 0.8039216, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_f4rtx"]
+font = ExtResource("7_cf2is")
 font_size = 24
 font_color = Color(0, 0, 0, 1)
 
@@ -53,6 +64,23 @@ region = Rect2(136, 136, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8lhh"]
 atlas = ExtResource("6_wlnme")
 region = Rect2(272, 136, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1617"]
+atlas = ExtResource("7_fnvwe")
+region = Rect2(0, 0, 216, 304)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf2is"]
+atlas = ExtResource("8_kdg7e")
+region = Rect2(36, 26, 130, 151)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kdg7e"]
+font = ExtResource("15_fnvwe")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2sral"]
+font = ExtResource("7_cf2is")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -78,84 +106,121 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 25
 alignment = 1
 
 [node name="StatsBackground" type="TextureRect" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 0
-texture = SubResource("GradientTexture2D_grl2c")
+texture = ExtResource("1_0h7de")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MainContainer/StatsBackground"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 7
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_w4lj1")
-expand_mode = 3
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_w4lj1")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "99 999 999"
+text = "100К"
 label_settings = SubResource("LabelSettings_grl2c")
 vertical_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_0h7de")
-expand_mode = 3
+theme_override_constants/separation = 8
 
-[node name="Label2" type="Label" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
-custom_minimum_size = Vector2(75, 0)
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
-size_flags_vertical = 1
-text = "99 "
-label_settings = SubResource("LabelSettings_grl2c")
-vertical_alignment = 1
-
-[node name="TextureRect3" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("3_3mcv8")
-expand_mode = 3
+stretch_mode = 2
 
-[node name="Label3" type="Label" parent="TextureRect/MainContainer/StatsBackground/HBoxContainer"]
-custom_minimum_size = Vector2(75, 0)
+[node name="Label3" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(52, 0)
 layout_mode = 2
-size_flags_vertical = 1
-text = "99 "
-label_settings = SubResource("LabelSettings_grl2c")
+size_flags_horizontal = 4
+text = "100"
+label_settings = SubResource("LabelSettings_wlnme")
 vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_0h7de")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+label_settings = SubResource("LabelSettings_fnvwe")
+vertical_alignment = 1
+
+[node name="Gap48" type="Control" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
 
 [node name="Logo" type="TextureRect" parent="TextureRect/MainContainer"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("4_a1617")
-expand_mode = 5
+expand_mode = 3
+
+[node name="Gap16" type="Control" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
 
 [node name="StateLabel" type="Label" parent="TextureRect/MainContainer"]
 layout_mode = 2
-text = "Чем займётся Дмитрий сегодня?"
+text = "Чем займётесь сегодня, Дмитрий?"
 label_settings = SubResource("LabelSettings_f4rtx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Gap32" type="Control" parent="TextureRect/MainContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
 [node name="MainButtons" type="GridContainer" parent="TextureRect/MainContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
+size_flags_vertical = 0
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
 columns = 3
 
 [node name="WorkButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
@@ -181,60 +246,133 @@ texture_normal = SubResource("AtlasTexture_fk3jj")
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_h8lhh")
 
+[node name="LargeGap" type="Control" parent="TextureRect/MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="MoneyBackground" type="TextureRect" parent="TextureRect/MainContainer"]
-custom_minimum_size = Vector2(225, 225)
+custom_minimum_size = Vector2(182, 182)
 layout_mode = 2
 size_flags_horizontal = 8
-texture = ExtResource("7_fnvwe")
+texture = SubResource("AtlasTexture_a1617")
 expand_mode = 1
 
 [node name="MoneyButton" type="TextureButton" parent="TextureRect/MainContainer/MoneyBackground"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -104.0
-offset_top = -104.0
-offset_right = 104.0
-offset_bottom = 104.0
-grow_horizontal = 2
+offset_left = -130.0
+offset_top = -75.5
+offset_bottom = 75.5
+grow_horizontal = 0
 grow_vertical = 2
-texture_normal = ExtResource("8_kdg7e")
-stretch_mode = 0
+texture_normal = SubResource("AtlasTexture_cf2is")
 
-[node name="DownerPanel" type="Control" parent="TextureRect/MainContainer"]
-custom_minimum_size = Vector2(0, 225)
+[node name="MarginsForDownerPanel" type="MarginContainer" parent="TextureRect/MainContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
 
-[node name="MenuButton" type="TextureButton" parent="TextureRect/MainContainer/DownerPanel"]
+[node name="DownerPanel" type="Control" parent="TextureRect/MainContainer/MarginsForDownerPanel"]
+custom_minimum_size = Vector2(0, 132)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MenuButton" type="TextureButton" parent="TextureRect/MainContainer/MarginsForDownerPanel/DownerPanel"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -181.5
-offset_right = 500.0
-offset_bottom = 318.5
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
 grow_vertical = 2
 size_flags_horizontal = 0
 texture_normal = ExtResource("9_2sral")
+stretch_mode = 0
 
-[node name="ProfileButton" type="TextureButton" parent="TextureRect/MainContainer/DownerPanel"]
-custom_minimum_size = Vector2(175, 175)
+[node name="ProfileButton" type="TextureButton" parent="TextureRect/MainContainer/MarginsForDownerPanel/DownerPanel"]
+custom_minimum_size = Vector2(161, 161)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -61.0
-offset_top = -61.0
-offset_right = 61.0
-offset_bottom = 61.0
+offset_left = -80.5
+offset_top = -89.5
+offset_right = 80.5
+offset_bottom = 71.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("10_3co8r")
 stretch_mode = 0
+
+[node name="CardMargins" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 64
+
+[node name="Card" type="TextureRect" parent="CardMargins"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("14_wlnme")
+
+[node name="MarginContainer" type="MarginContainer" parent="CardMargins/Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 47
+theme_override_constants/margin_top = 43
+theme_override_constants/margin_right = 47
+theme_override_constants/margin_bottom = 51
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardMargins/Card/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CardHeader" type="Label" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+text = "СЕМЬЯ"
+label_settings = SubResource("LabelSettings_kdg7e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(358, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "ааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа"
+label_settings = SubResource("LabelSettings_2sral")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="yes" type="TextureButton" parent="CardMargins/Card/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("16_kdg7e")
+
+[node name="gap" type="Control" parent="CardMargins/Card/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="no" type="TextureButton" parent="CardMargins/Card/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("17_2sral")

@@ -21,8 +21,8 @@ Network="*res://scenes/network.gd"
 
 [display]
 
-window/size/viewport_width=540
-window/size/viewport_height=1080
+window/size/viewport_width=430
+window/size/viewport_height=932
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
