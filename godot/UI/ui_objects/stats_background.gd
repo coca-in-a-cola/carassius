@@ -9,6 +9,6 @@ func update(player_data):
 			health = stat['value']
 		if stat['id'] == 'spirit':
 			spirit = stat['value']
-	$MarginContainer/HBoxContainer/HBoxContainer/MoneyLabel.text = str(int(money))
-	$MarginContainer/HBoxContainer/HBoxContainer2/SpiritLabel.text = str(int(spirit))
-	$MarginContainer/HBoxContainer/HBoxContainer3/HealthLabel.text = str(int(health))
+	$MarginContainer/HBoxContainer/HBoxContainer/MoneyLabel.set_value(int(money))
+	$MarginContainer/HBoxContainer/HBoxContainer2/SpiritLabel.set_value(int(spirit))
+	$MarginContainer/HBoxContainer/HBoxContainer3/HealthLabel.set_value(int(health))

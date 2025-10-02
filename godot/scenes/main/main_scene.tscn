@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://i4u5f7kq4wm"]
+[gd_scene load_steps=37 format=3 uid="uid://i4u5f7kq4wm"]
 
 [ext_resource type="Texture2D" uid="uid://dkryyynexlrdq" path="res://UI/assets/Header.png" id="1_0h7de"]
 [ext_resource type="Script" uid="uid://crlygna561y7h" path="res://scenes/main/ui.gd" id="1_2sral"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://da6fdltoewj85" path="res://UI/ui_objects/stats_background.gd" id="3_meece"]
 [ext_resource type="Texture2D" uid="uid://cn0jes5fq3x75" path="res://UI/assets/Logo original.png" id="4_a1617"]
 [ext_resource type="PackedScene" uid="uid://bvcmwukk274c1" path="res://UI/ui_objects/main_button.tscn" id="5_cf2is"]
+[ext_resource type="Script" uid="uid://b5w0ucmqowrkn" path="res://UI/ui_objects/anim_label.gd" id="6_vo0go"]
 [ext_resource type="Texture2D" uid="uid://dqw43yxxoev5f" path="res://UI/assets/Grid.png" id="6_wlnme"]
 [ext_resource type="FontFile" uid="uid://cllcsorat757d" path="res://UI/fonts/Gazprombank Sans DemiBold.otf" id="7_cf2is"]
 [ext_resource type="Texture2D" uid="uid://bjei5a46qsvjr" path="res://UI/assets/Ellipse 1.png" id="7_fnvwe"]
@@ -154,6 +155,8 @@ size_flags_vertical = 1
 text = "100К"
 label_settings = SubResource("LabelSettings_grl2c")
 vertical_alignment = 1
+script = ExtResource("6_vo0go")
+metadata/_custom_type_script = "uid://b5w0ucmqowrkn"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -173,6 +176,8 @@ size_flags_horizontal = 4
 text = "100"
 label_settings = SubResource("LabelSettings_wlnme")
 vertical_alignment = 1
+script = ExtResource("6_vo0go")
+metadata/_custom_type_script = "uid://b5w0ucmqowrkn"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -192,6 +197,8 @@ size_flags_horizontal = 4
 text = "100"
 label_settings = SubResource("LabelSettings_fnvwe")
 vertical_alignment = 1
+script = ExtResource("6_vo0go")
+metadata/_custom_type_script = "uid://b5w0ucmqowrkn"
 
 [node name="Gap48" type="Control" parent="TextureRect/MainContainer"]
 custom_minimum_size = Vector2(0, 48)
