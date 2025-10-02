@@ -1,6 +1,6 @@
-import { Player } from '@server/core';
+import { Player } from '../../core';
 import { GameStartResponse } from './game.models';
-import { gameSystem } from '@server/core/systems/game.system';
+import { gameSystem } from '../../core/systems/game.system';
 
 export class GameService {
   public startNewGame(): GameStartResponse {

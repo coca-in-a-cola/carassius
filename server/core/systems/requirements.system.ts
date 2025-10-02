@@ -1,4 +1,4 @@
-import { Player, Requirement } from '@server/core/models';
+import { Player, Requirement } from '../../core/models';
 
 class RequirementSystem {
   private requirements: Map<number, Requirement> = new Map();

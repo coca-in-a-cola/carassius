@@ -1,4 +1,4 @@
-import { Player, Card, CardCategory, PlayerCardRecord } from '@server/core/models';
+import { Player, Card, CardCategory, PlayerCardRecord } from '../../core/models';
 import { requirementSystem } from './requirements.system';
 
 class CardSystem {

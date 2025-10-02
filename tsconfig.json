@@ -14,11 +14,6 @@
     "useDefineForClassFields": false,
     "importHelpers": true,
     "baseUrl": "./server",
-    "paths": {
-      "@server/*": [
-        "./*"
-      ],
-    }
   },
   "include": [
     "./*.js",

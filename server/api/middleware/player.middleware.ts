@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { gameSystem } from '@server/core/systems';
+import { gameSystem } from '../../core/systems';
 
 export function ensurePlayer(req: Request, res: Response, next: NextFunction): void {
   const playerUuid = req.header('X-Player-UUID');
