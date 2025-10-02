@@ -12,11 +12,13 @@
   "scripts": {
     "start": "node server-dist/index.js",
     "dev": "tsx watch server/index.ts",
-    "build": "tsc",
+    "prebuild": "tsc",
+    "build": "copyfiles csv/* server-dist && copyfiles build/* server-dist",
     "lint": "eslint --fix server",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "copyfiles": "2.4.1",
     "cors": "2.8.5",
     "express": "5.1.0",
     "helmet": "8.1.0",

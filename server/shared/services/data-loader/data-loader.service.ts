@@ -24,12 +24,12 @@ export class DataLoaderService {
   }
 
   public async load(): Promise<GameData> {
-    const pathFromRoot = path.join(__dirname, '..', '..', '..', '..', DATA_PATH);
-
+    const pathFromRoot = path.join(__dirname, '..', '..', '..', DATA_PATH);
     const cards = await this.parsePath<Card>(path.join(pathFromRoot, 'cards.csv'), Card);
     const effects = await this.parsePath<Effect>(path.join(pathFromRoot, 'effects.csv'), Effect);
     const requirements = await this.parsePath<Requirement>(path.join(pathFromRoot, 'requirements.csv'), Requirement);
 
+    console.log(`Reading csv directory ${pathFromRoot}`);
     return { cards, effects, requirements };
   }
 
