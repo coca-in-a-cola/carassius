@@ -37,6 +37,7 @@ app.get('/*splat', (req, res) => {
     return;
   }
 
+
   const indexPath = path.join(__dirname, './build/index.html');
   console.log(console.log(`Sending index file from build ${indexPath}`));
   res.sendFile(indexPath);
