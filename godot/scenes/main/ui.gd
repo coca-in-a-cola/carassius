@@ -21,3 +21,4 @@ func _player_data_updated(player_data):
 	else:
 		cardMargins.hide_card()
 	statsBackground.update(player_data)
+	$TextureRect/MainContainer/DaysLabel.text = 'День ' + str(int(player_data['day']))

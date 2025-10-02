@@ -216,9 +216,16 @@ expand_mode = 3
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 
+[node name="DaysLabel" type="Label" parent="TextureRect/MainContainer"]
+layout_mode = 2
+text = "День 0"
+label_settings = SubResource("LabelSettings_f4rtx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="StateLabel" type="Label" parent="TextureRect/MainContainer"]
 layout_mode = 2
-text = "Чем займётесь сегодня, Дмитрий?"
+text = "Чем займётесь сегодня?"
 label_settings = SubResource("LabelSettings_f4rtx")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -333,6 +340,7 @@ texture_normal = ExtResource("10_3co8r")
 stretch_mode = 0
 
 [node name="CardMargins" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
