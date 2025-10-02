@@ -1,11 +1,11 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1759401155
-export_presets.cfg::TextFile::-1::1759348465::0::1::::<><><>0<>0<><>::
+::res://::1759424894
+export_presets.cfg::TextFile::-1::1759402187::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5176643333233221016::1758391720::1759393349::1::::<><><>0<>0<>b5f6e9af8b8bbecc25e8fb29f609a699<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://scenes/::1759394780
 network.gd::GDScript::4963868322683483539::1759394780::0::1::::<>Node<><>0<>0<><>::
-::res://scenes/main/::1759395770
-main_scene.tscn::PackedScene::18313115593290060::1759395770::0::1::::<><><>0<>0<><>::uid://dkryyynexlrdq::::res://UI/assets/Header.png<>uid://crlygna561y7h::::res://scenes/main/ui.gd<>uid://d07iyr0vbtgov::::res://UI/assets/Money.png<>uid://b0wjjqpqaccxn::::res://UI/assets/Group 8.png<>uid://m2rtbuxveo73::::res://UI/assets/Group 9.png<>uid://d3orih261k284::::res://UI/fonts/Halvar Breitschrift-Bold-Desktop.otf<>uid://da6fdltoewj85::::res://UI/ui_objects/stats_background.gd<>uid://cn0jes5fq3x75::::res://UI/assets/Logo original.png<>uid://bvcmwukk274c1::::res://UI/ui_objects/main_button.tscn<>uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cllcsorat757d::::res://UI/fonts/Gazprombank Sans DemiBold.otf<>uid://bjei5a46qsvjr::::res://UI/assets/Ellipse 1.png<>uid://dovgd4lysa3xl::::res://UI/assets/image 8.png<>uid://b270owbt40set::::res://UI/assets/Menu 3.svg<>uid://dcy1536lel8np::::res://UI/assets/Avatar.png<>uid://bdrql67fsaakt::::res://UI/assets/Frame 23.png<>uid://cbm68f1svwm46::::res://UI/ui_objects/card_margins.gd<>uid://dc1rihen611sc::::res://UI/fonts/Halvar Breitschrift-Medium-Desktop.otf<>uid://b0gedsh7o6bpt::::res://UI/assets/Frame 25.png<>uid://d4i2oa7s87lu4::::res://UI/assets/Frame 26.png
+::res://scenes/main/::1759402380
+main_scene.tscn::PackedScene::18313115593290060::1759402380::0::1::::<><><>0<>0<><>::uid://dkryyynexlrdq::::res://UI/assets/Header.png<>uid://crlygna561y7h::::res://scenes/main/ui.gd<>uid://d07iyr0vbtgov::::res://UI/assets/Money.png<>uid://b0wjjqpqaccxn::::res://UI/assets/Group 8.png<>uid://m2rtbuxveo73::::res://UI/assets/Group 9.png<>uid://d3orih261k284::::res://UI/fonts/Halvar Breitschrift-Bold-Desktop.otf<>uid://da6fdltoewj85::::res://UI/ui_objects/stats_background.gd<>uid://cn0jes5fq3x75::::res://UI/assets/Logo original.png<>uid://bvcmwukk274c1::::res://UI/ui_objects/main_button.tscn<>uid://b5w0ucmqowrkn::::res://UI/ui_objects/anim_label.gd<>uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cllcsorat757d::::res://UI/fonts/Gazprombank Sans DemiBold.otf<>uid://bjei5a46qsvjr::::res://UI/assets/Ellipse 1.png<>uid://dovgd4lysa3xl::::res://UI/assets/image 8.png<>uid://b270owbt40set::::res://UI/assets/Menu 3.svg<>uid://dcy1536lel8np::::res://UI/assets/Avatar.png<>uid://bdrql67fsaakt::::res://UI/assets/Frame 23.png<>uid://cbm68f1svwm46::::res://UI/ui_objects/card_margins.gd<>uid://dc1rihen611sc::::res://UI/fonts/Halvar Breitschrift-Medium-Desktop.otf<>uid://b0gedsh7o6bpt::::res://UI/assets/Frame 25.png<>uid://d4i2oa7s87lu4::::res://UI/assets/Frame 26.png
 ui.gd::GDScript::5990228471326326439::1759395625::0::1::::<>Control<><>0<>0<><>::
 ::res://UI/::1759393059
 ::res://UI/assets/::1759393349
@@ -29,8 +29,9 @@ Money.png::CompressedTexture2D::8980572757629172113::1759235706::1759331756::1::
 Gazprombank Sans DemiBold.otf::FontFile::5567781142590297899::1759393059::1759393349::1::::<><><>0<>0<>5cd67df309ea44805995ebd9c62c6dff<>res://.godot/imported/Gazprombank Sans DemiBold.otf-7929d7d9bf147fe1c52af65c2b043390.fontdata::
 Halvar Breitschrift-Bold-Desktop.otf::FontFile::9154497847546154363::1759393059::1759393349::1::::<><><>0<>0<>3dceaf01edbef45a191d28cf96e1a4cc<>res://.godot/imported/Halvar Breitschrift-Bold-Desktop.otf-18f00cef1aa65706e1df9a2ac3fa9b24.fontdata::
 Halvar Breitschrift-Medium-Desktop.otf::FontFile::7354360409664999342::1759393059::1759393349::1::::<><><>0<>0<>db529668214b1cb2ef0403d4f5eb5f7d<>res://.godot/imported/Halvar Breitschrift-Medium-Desktop.otf-d1e02174374e3e6e731d4507afa0a5b9.fontdata::
-::res://UI/ui_objects/::1759395770
+::res://UI/ui_objects/::1759402381
+anim_label.gd::GDScript::4539056068451560629::1759402381::0::1::::AnimatedLabel<>Label<><>0<>0<><>::
 card_margins.gd::GDScript::4869744205676019561::1759395770::0::1::::<>MarginContainer<><>0<>0<><>::
 main_button.gd::GDScript::1094252400048952866::1759394163::0::1::::CategoryButton<>TextureButton<><>0<>0<><>::
 main_button.tscn::PackedScene::3865284113385779650::1759394163::0::1::::<><><>0<>0<><>::uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cj0l3m42feads::::res://UI/assets/Category.png<>uid://pucga17wbtha::::res://UI/ui_objects/main_button.gd<>uid://dj65pen0ttx6e::::res://UI/assets/Frame 13.png
-stats_background.gd::GDScript::7223567311551156244::1759395685::0::1::::<>TextureRect<><>0<>0<><>::
+stats_background.gd::GDScript::7223567311551156244::1759401615::0::1::::<>TextureRect<><>0<>0<><>::

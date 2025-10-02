@@ -19,5 +19,5 @@ func _player_data_updated(player_data):
 		var card = player_data['selectedCard']
 		cardMargins.show_card(card)
 	else:
-		cardMargins.hide()
+		cardMargins.hide_card()
 	statsBackground.update(player_data)
