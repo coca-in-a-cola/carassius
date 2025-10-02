@@ -1,34 +1,33 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1759390026
-export_presets.cfg::TextFile::-1::1758541425::0::1::::<><><>0<>0<><>::
-icon.svg::CompressedTexture2D::5176643333233221016::1758541425::1759338156::1::::<><><>0<>0<>b5f6e9af8b8bbecc25e8fb29f609a699<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://scenes/::1759341511
-network.gd::GDScript::4963868322683483539::1759341511::0::1::::<>Node<><>0<>0<><>::
-::res://scenes/loading/::1759338040
-::res://scenes/main/::1759391087
-main_scene.tscn::PackedScene::18313115593290060::1759391087::0::1::::<><><>0<>0<><>::uid://dkryyynexlrdq::::res://UI/assets/Header.png<>uid://d07iyr0vbtgov::::res://UI/assets/Money.png<>uid://b0wjjqpqaccxn::::res://UI/assets/Group 8.png<>uid://m2rtbuxveo73::::res://UI/assets/Group 9.png<>uid://d3orih261k284::::res://UI/fonts/Halvar Breitschrift-Bold-Desktop.otf<>uid://cn0jes5fq3x75::::res://UI/assets/Logo original.png<>uid://bvcmwukk274c1::::res://UI/ui_objects/main_button.tscn<>uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cllcsorat757d::::res://UI/fonts/Gazprombank Sans DemiBold.otf<>uid://bjei5a46qsvjr::::res://UI/assets/Ellipse 1.png<>uid://dovgd4lysa3xl::::res://UI/assets/image 8.png<>uid://b270owbt40set::::res://UI/assets/Menu 3.svg<>uid://dcy1536lel8np::::res://UI/assets/Avatar.png
-::res://UI/::1759340272
-::res://UI/assets/::1759390932
-Avatar.png::CompressedTexture2D::7350818539130224389::1759227110::1759227111::1::::<><><>0<>0<>b26f7c76590f3807a0231ca03077298e<>res://.godot/imported/Avatar.png-1b23322d6366c98b42dc6705bffe31a8.ctex::
-Category.png::CompressedTexture2D::5456868969442881416::1759227131::1759227131::1::::<><><>0<>0<>6a0c94429c3f76e3feea7b296384e169<>res://.godot/imported/Category.png-f0c7c1be51032e679ca50dd11ab29607.ctex::
-Ellipse 1.png::CompressedTexture2D::3026917143440849863::1759228933::1759228933::1::::<><><>0<>0<>edd08592db30ddc9a0a474eb5c0b23f7<>res://.godot/imported/Ellipse 1.png-966efe248f44b032c7d331adbb4fa24e.ctex::
-Frame 13.png::CompressedTexture2D::7856805882226923430::1759227131::1759227131::1::::<><><>0<>0<>90e9d20cc7d14273458a608728863456<>res://.godot/imported/Frame 13.png-ae1c8211f5ff917f31d1b49e701268cd.ctex::
-Frame 23.png::CompressedTexture2D::2633074429952258983::1759390908::1759390909::1::::<><><>0<>0<>20ab0efb89068f2f7a367bddca8787e2<>res://.godot/imported/Frame 23.png-ad274b169e1b95d0dcc41da7834f3dd9.ctex::
-Frame 25.png::CompressedTexture2D::4153777224228845741::1759390932::1759390932::1::::<><><>0<>0<>61d717571c0c07d27dfcc238a1e0d0f3<>res://.godot/imported/Frame 25.png-8b7fad1f3009b91cd2e1bdf47824ae65.ctex::
-Frame 26.png::CompressedTexture2D::9212917948831032769::1759390924::1759390924::1::::<><><>0<>0<>23c231112a41b15917398f10375818c4<>res://.godot/imported/Frame 26.png-74065af7092fed2dd233669e4673d860.ctex::
-Grid.png::CompressedTexture2D::8329511952051511925::1759338358::1759338358::1::::<><><>0<>0<>43fc3743f4063fe0622260bf6c3296e7<>res://.godot/imported/Grid.png-bbfefc81fd7f08621beea1e188e8ee13.ctex::
-Group 8.png::CompressedTexture2D::4187121474585985011::1759229559::1759229559::1::::<><><>0<>0<>c3203973fb8541689e8d21215b58bab5<>res://.godot/imported/Group 8.png-e502f6688cf4ba978410a07e99f1a2ff.ctex::
-Group 9.png::CompressedTexture2D::899070526469916260::1759229559::1759229559::1::::<><><>0<>0<>84577200d9add365674e3b47e34b866b<>res://.godot/imported/Group 9.png-772cd4c211af4f4f902f31425c52e389.ctex::
-Header.png::CompressedTexture2D::7897746257014546242::1759338697::1759338719::1::::<><><>0<>0<>401ae718bc99f714706cea18c7b3f550<>res://.godot/imported/Header.png-a1df2767bfb91e50bc7a5f3921951ede.ctex::
-image 8.png::CompressedTexture2D::8185628995469865449::1759228933::1759228933::1::::<><><>0<>0<>81865bc104449ac4d84d50c87409edf2<>res://.godot/imported/image 8.png-b4d94eba365f97a7e72dfdfdd066748f.ctex::
-Logo original.png::CompressedTexture2D::5737460366656757050::1759227120::1759227121::1::::<><><>0<>0<>fbc0dcb2b5190048a6c40b87a3a2eea0<>res://.godot/imported/Logo original.png-5e963f95cc8408d3043da395a9759e5c.ctex::
-Menu 3.png::CompressedTexture2D::5119159632980333866::1759227096::1759227096::1::::<><><>0<>0<>b0846509d8b8c38f85aad404f159a60c<>res://.godot/imported/Menu 3.png-ae06c799ea85cf2e2382d539c6fd3d87.ctex::
-Menu 3.svg::CompressedTexture2D::4349123633945256347::1759338040::1759338156::1::::<><><>0<>0<>a5a879467f5901a8b10928e180248f5d<>res://.godot/imported/Menu 3.svg-7d6da5c923008ab05d1d44127e7b4607.ctex::
-Money.png::CompressedTexture2D::8980572757629172113::1759229559::1759229559::1::::<><><>0<>0<>94e4d3e2af4332aac373bc2a67e969ac<>res://.godot/imported/Money.png-0297755b1036a02bfd08587362662038.ctex::
-::res://UI/fonts/::1759391644
-Gazprombank Sans DemiBold.otf::FontFile::5567781142590297899::1759340433::1759340434::1::::<><><>0<>0<>5cd67df309ea44805995ebd9c62c6dff<>res://.godot/imported/Gazprombank Sans DemiBold.otf-7929d7d9bf147fe1c52af65c2b043390.fontdata::
-Halvar Breitschrift-Bold-Desktop.otf::FontFile::9154497847546154363::1759340274::1759340275::1::::<><><>0<>0<>3dceaf01edbef45a191d28cf96e1a4cc<>res://.godot/imported/Halvar Breitschrift-Bold-Desktop.otf-18f00cef1aa65706e1df9a2ac3fa9b24.fontdata::
-Halvar Breitschrift-Medium-Desktop.otf::FontFile::7354360409664999342::1759391644::1759391645::1::::<><><>0<>0<>db529668214b1cb2ef0403d4f5eb5f7d<>res://.godot/imported/Halvar Breitschrift-Medium-Desktop.otf-d1e02174374e3e6e731d4507afa0a5b9.fontdata::
-::res://UI/ui_objects/::1759391386
-main_button.gd::GDScript::1094252400048952866::1759230544::0::1::::<>TextureButton<><>0<>0<><>::
-main_button.tscn::PackedScene::3865284113385779650::1759338534::0::1::::<><><>0<>0<><>::uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cj0l3m42feads::::res://UI/assets/Category.png<>uid://dj65pen0ttx6e::::res://UI/assets/Frame 13.png
+::res://::1759393368
+export_presets.cfg::TextFile::-1::1759348465::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::5176643333233221016::1758391720::1759393349::1::::<><><>0<>0<>b5f6e9af8b8bbecc25e8fb29f609a699<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://scenes/::1759348782
+network.gd::GDScript::4963868322683483539::1759348782::0::1::::<>Node<><>0<>0<><>::
+::res://scenes/main/::1759393059
+main_scene.tscn::PackedScene::18313115593290060::1759393059::0::1::::<><><>0<>0<><>::uid://dkryyynexlrdq::::res://UI/assets/Header.png<>uid://d07iyr0vbtgov::::res://UI/assets/Money.png<>uid://b0wjjqpqaccxn::::res://UI/assets/Group 8.png<>uid://m2rtbuxveo73::::res://UI/assets/Group 9.png<>uid://d3orih261k284::::res://UI/fonts/Halvar Breitschrift-Bold-Desktop.otf<>uid://cn0jes5fq3x75::::res://UI/assets/Logo original.png<>uid://bvcmwukk274c1::::res://UI/ui_objects/main_button.tscn<>uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cllcsorat757d::::res://UI/fonts/Gazprombank Sans DemiBold.otf<>uid://bjei5a46qsvjr::::res://UI/assets/Ellipse 1.png<>uid://dovgd4lysa3xl::::res://UI/assets/image 8.png<>uid://b270owbt40set::::res://UI/assets/Menu 3.svg<>uid://dcy1536lel8np::::res://UI/assets/Avatar.png<>uid://bdrql67fsaakt::::res://UI/assets/Frame 23.png<>uid://dc1rihen611sc::::res://UI/fonts/Halvar Breitschrift-Medium-Desktop.otf<>uid://b0gedsh7o6bpt::::res://UI/assets/Frame 25.png<>uid://d4i2oa7s87lu4::::res://UI/assets/Frame 26.png
+::res://UI/::1759393059
+::res://UI/assets/::1759393349
+Avatar.png::CompressedTexture2D::7350818539130224389::1759235706::1759331756::1::::<><><>0<>0<>b26f7c76590f3807a0231ca03077298e<>res://.godot/imported/Avatar.png-1b23322d6366c98b42dc6705bffe31a8.ctex::
+Category.png::CompressedTexture2D::5456868969442881416::1759235706::1759331756::1::::<><><>0<>0<>6a0c94429c3f76e3feea7b296384e169<>res://.godot/imported/Category.png-f0c7c1be51032e679ca50dd11ab29607.ctex::
+Ellipse 1.png::CompressedTexture2D::3026917143440849863::1759235706::1759331756::1::::<><><>0<>0<>edd08592db30ddc9a0a474eb5c0b23f7<>res://.godot/imported/Ellipse 1.png-966efe248f44b032c7d331adbb4fa24e.ctex::
+Frame 13.png::CompressedTexture2D::7856805882226923430::1759235706::1759331756::1::::<><><>0<>0<>90e9d20cc7d14273458a608728863456<>res://.godot/imported/Frame 13.png-ae1c8211f5ff917f31d1b49e701268cd.ctex::
+Frame 23.png::CompressedTexture2D::2633074429952258983::1759393059::1759393349::1::::<><><>0<>0<>20ab0efb89068f2f7a367bddca8787e2<>res://.godot/imported/Frame 23.png-ad274b169e1b95d0dcc41da7834f3dd9.ctex::
+Frame 25.png::CompressedTexture2D::4153777224228845741::1759393059::1759393349::1::::<><><>0<>0<>61d717571c0c07d27dfcc238a1e0d0f3<>res://.godot/imported/Frame 25.png-8b7fad1f3009b91cd2e1bdf47824ae65.ctex::
+Frame 26.png::CompressedTexture2D::9212917948831032769::1759393059::1759393349::1::::<><><>0<>0<>23c231112a41b15917398f10375818c4<>res://.godot/imported/Frame 26.png-74065af7092fed2dd233669e4673d860.ctex::
+Grid.png::CompressedTexture2D::8329511952051511925::1759393059::1759393349::1::::<><><>0<>0<>43fc3743f4063fe0622260bf6c3296e7<>res://.godot/imported/Grid.png-bbfefc81fd7f08621beea1e188e8ee13.ctex::
+Group 8.png::CompressedTexture2D::4187121474585985011::1759235706::1759331756::1::::<><><>0<>0<>c3203973fb8541689e8d21215b58bab5<>res://.godot/imported/Group 8.png-e502f6688cf4ba978410a07e99f1a2ff.ctex::
+Group 9.png::CompressedTexture2D::899070526469916260::1759235706::1759331756::1::::<><><>0<>0<>84577200d9add365674e3b47e34b866b<>res://.godot/imported/Group 9.png-772cd4c211af4f4f902f31425c52e389.ctex::
+Header.png::CompressedTexture2D::7897746257014546242::1759393059::1759393349::1::::<><><>0<>0<>401ae718bc99f714706cea18c7b3f550<>res://.godot/imported/Header.png-a1df2767bfb91e50bc7a5f3921951ede.ctex::
+image 8.png::CompressedTexture2D::8185628995469865449::1759235706::1759331756::1::::<><><>0<>0<>81865bc104449ac4d84d50c87409edf2<>res://.godot/imported/image 8.png-b4d94eba365f97a7e72dfdfdd066748f.ctex::
+Logo original.png::CompressedTexture2D::5737460366656757050::1759235706::1759331756::1::::<><><>0<>0<>fbc0dcb2b5190048a6c40b87a3a2eea0<>res://.godot/imported/Logo original.png-5e963f95cc8408d3043da395a9759e5c.ctex::
+Menu 3.png::CompressedTexture2D::5119159632980333866::1759235706::1759331756::1::::<><><>0<>0<>b0846509d8b8c38f85aad404f159a60c<>res://.godot/imported/Menu 3.png-ae06c799ea85cf2e2382d539c6fd3d87.ctex::
+Menu 3.svg::CompressedTexture2D::4349123633945256347::1759332147::1759332743::1::::<><><>0<>0<>a5a879467f5901a8b10928e180248f5d<>res://.godot/imported/Menu 3.svg-7d6da5c923008ab05d1d44127e7b4607.ctex::
+Money.png::CompressedTexture2D::8980572757629172113::1759235706::1759331756::1::::<><><>0<>0<>94e4d3e2af4332aac373bc2a67e969ac<>res://.godot/imported/Money.png-0297755b1036a02bfd08587362662038.ctex::
+::res://UI/fonts/::1759393349
+Gazprombank Sans DemiBold.otf::FontFile::5567781142590297899::1759393059::1759393349::1::::<><><>0<>0<>5cd67df309ea44805995ebd9c62c6dff<>res://.godot/imported/Gazprombank Sans DemiBold.otf-7929d7d9bf147fe1c52af65c2b043390.fontdata::
+Halvar Breitschrift-Bold-Desktop.otf::FontFile::9154497847546154363::1759393059::1759393349::1::::<><><>0<>0<>3dceaf01edbef45a191d28cf96e1a4cc<>res://.godot/imported/Halvar Breitschrift-Bold-Desktop.otf-18f00cef1aa65706e1df9a2ac3fa9b24.fontdata::
+Halvar Breitschrift-Medium-Desktop.otf::FontFile::7354360409664999342::1759393059::1759393349::1::::<><><>0<>0<>db529668214b1cb2ef0403d4f5eb5f7d<>res://.godot/imported/Halvar Breitschrift-Medium-Desktop.otf-d1e02174374e3e6e731d4507afa0a5b9.fontdata::
+::res://UI/ui_objects/::1759393059
+main_button.gd::GDScript::1094252400048952866::1759235706::0::1::::<>TextureButton<><>0<>0<><>::
+main_button.tscn::PackedScene::3865284113385779650::1759393059::0::1::::<><><>0<>0<><>::uid://dqw43yxxoev5f::::res://UI/assets/Grid.png<>uid://cj0l3m42feads::::res://UI/assets/Category.png<>uid://dj65pen0ttx6e::::res://UI/assets/Frame 13.png

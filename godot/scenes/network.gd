@@ -21,6 +21,7 @@ const CardCategory = {
 func _ready() -> void:
 	baseURL = JavaScriptBridge.eval("`${window.location.origin}/api/`")
 	if not await check_uuid():
+		print("starting new game")
 		await new_game()
 	if player_data == null:
 		await get_player()
@@ -39,9 +40,9 @@ func api(url, method=HTTPClient.Method.METHOD_GET, headers=[], body=""):
 	var status_code = result[1]
 	var response_body = result[3].get_string_from_utf8()
 	print("Received response with status: ", status_code)
-	if err != OK || status_code != 200:
+	if err != OK || status_code >= 300:
 		print("Error: ", response_body)
-	if status_code == 200:
+	if status_code < 300:
 		response_body = JSON.parse_string(response_body)
 		if response_body.has("uuid"):
 			update_player(response_body)

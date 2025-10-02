@@ -1,10 +1,12 @@
-[gd_scene load_steps=33 format=3 uid="uid://i4u5f7kq4wm"]
+[gd_scene load_steps=36 format=3 uid="uid://i4u5f7kq4wm"]
 
 [ext_resource type="Texture2D" uid="uid://dkryyynexlrdq" path="res://UI/assets/Header.png" id="1_0h7de"]
+[ext_resource type="Script" uid="uid://crlygna561y7h" path="res://scenes/main/ui.gd" id="1_2sral"]
 [ext_resource type="Texture2D" uid="uid://d07iyr0vbtgov" path="res://UI/assets/Money.png" id="1_w4lj1"]
 [ext_resource type="Texture2D" uid="uid://b0wjjqpqaccxn" path="res://UI/assets/Group 8.png" id="2_0h7de"]
 [ext_resource type="Texture2D" uid="uid://m2rtbuxveo73" path="res://UI/assets/Group 9.png" id="3_3mcv8"]
 [ext_resource type="FontFile" uid="uid://d3orih261k284" path="res://UI/fonts/Halvar Breitschrift-Bold-Desktop.otf" id="3_a1617"]
+[ext_resource type="Script" uid="uid://da6fdltoewj85" path="res://UI/ui_objects/stats_background.gd" id="3_meece"]
 [ext_resource type="Texture2D" uid="uid://cn0jes5fq3x75" path="res://UI/assets/Logo original.png" id="4_a1617"]
 [ext_resource type="PackedScene" uid="uid://bvcmwukk274c1" path="res://UI/ui_objects/main_button.tscn" id="5_cf2is"]
 [ext_resource type="Texture2D" uid="uid://dqw43yxxoev5f" path="res://UI/assets/Grid.png" id="6_wlnme"]
@@ -14,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b270owbt40set" path="res://UI/assets/Menu 3.svg" id="9_2sral"]
 [ext_resource type="Texture2D" uid="uid://dcy1536lel8np" path="res://UI/assets/Avatar.png" id="10_3co8r"]
 [ext_resource type="Texture2D" uid="uid://bdrql67fsaakt" path="res://UI/assets/Frame 23.png" id="14_wlnme"]
+[ext_resource type="Script" uid="uid://cbm68f1svwm46" path="res://UI/ui_objects/card_margins.gd" id="15_3co8r"]
 [ext_resource type="FontFile" uid="uid://dc1rihen611sc" path="res://UI/fonts/Halvar Breitschrift-Medium-Desktop.otf" id="15_fnvwe"]
 [ext_resource type="Texture2D" uid="uid://b0gedsh7o6bpt" path="res://UI/assets/Frame 25.png" id="16_kdg7e"]
 [ext_resource type="Texture2D" uid="uid://d4i2oa7s87lu4" path="res://UI/assets/Frame 26.png" id="17_2sral"]
@@ -89,6 +92,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2sral")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -113,6 +117,7 @@ custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 0
 texture = ExtResource("1_0h7de")
+script = ExtResource("3_meece")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect/MainContainer/StatsBackground"]
 layout_mode = 1
@@ -142,7 +147,7 @@ size_flags_vertical = 4
 texture = ExtResource("1_w4lj1")
 stretch_mode = 2
 
-[node name="Label" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="MoneyLabel" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -161,7 +166,7 @@ size_flags_vertical = 4
 texture = ExtResource("3_3mcv8")
 stretch_mode = 2
 
-[node name="Label3" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer2"]
+[node name="SpiritLabel" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(52, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -180,7 +185,7 @@ size_flags_vertical = 4
 texture = ExtResource("2_0h7de")
 stretch_mode = 2
 
-[node name="Label2" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer3"]
+[node name="HealthLabel" type="Label" parent="TextureRect/MainContainer/StatsBackground/MarginContainer/HBoxContainer/HBoxContainer3"]
 custom_minimum_size = Vector2(52, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -225,26 +230,32 @@ columns = 3
 
 [node name="WorkButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
 layout_mode = 2
+category = "work"
 
 [node name="FamilyButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_eprtr")
+category = "family"
 
 [node name="HealthButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_e28vo")
+category = "medicine"
 
 [node name="LeavsButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_4uthp")
+category = "education"
 
 [node name="KaminButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_fk3jj")
+category = "hobby"
 
 [node name="FinanceButton" parent="TextureRect/MainContainer/MainButtons" instance=ExtResource("5_cf2is")]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_h8lhh")
+category = "financials"
 
 [node name="LargeGap" type="Control" parent="TextureRect/MainContainer"]
 layout_mode = 2
@@ -322,6 +333,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 64
+script = ExtResource("15_3co8r")
 
 [node name="Card" type="TextureRect" parent="CardMargins"]
 layout_mode = 2
@@ -345,7 +357,7 @@ theme_override_constants/margin_bottom = 51
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="CardHeader" type="Label" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
+[node name="CardCategory" type="Label" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 37)
 layout_mode = 2
 text = "СЕМЬЯ"
@@ -353,7 +365,7 @@ label_settings = SubResource("LabelSettings_kdg7e")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
+[node name="CardText" type="Label" parent="CardMargins/Card/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(358, 0)
 layout_mode = 2
 size_flags_vertical = 3
