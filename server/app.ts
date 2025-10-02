@@ -26,7 +26,7 @@ setApiRoutes(router);
 
 app.use('/api', router);
 
-app.use('/', express.static(path.join(__dirname, './build')));
+app.use('/', express.static(path.join(__dirname, './public')));
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: false, limit: '5mb' }));
 
@@ -38,8 +38,7 @@ app.get('/*splat', (req, res) => {
   }
 
 
-  const indexPath = path.join(__dirname, './build/index.html');
-  console.log(console.log(`Sending index file from build ${indexPath}`));
+  const indexPath = path.join(__dirname, './public/index.html');
   res.sendFile(indexPath);
 });
 
