@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "commonjs",
     "strict": true,
     "noImplicitAny": true,
     "outDir": "server-dist",
     "sourceMap": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
-    "importHelpers": true,
     "baseUrl": "./server",
+    "skipLibCheck": true,
+    "rootDir": "./server",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "target": "ES2022",
+    "module": "nodenext",
+    "importHelpers": true,
+    "moduleResolution": "nodenext",
   },
   "include": [
     "./*.js",
